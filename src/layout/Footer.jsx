@@ -1,5 +1,6 @@
 import "../index.css";
 import talk from "../assets/layout/talk.svg";
+import talk_gif from "../assets/layout/talk.gif";
 import facebook from "../assets/layout/facebook.png";
 import instagram from "../assets/layout/instagram.png";
 import Medium from "../assets/layout/Medium.png";
@@ -14,9 +15,11 @@ const Footer = () => {
     return (
         < >
             <div className=" w-full">
-                <div className="flex flex-col h-[180px] max-lg:h-[180px] max-sm:h-[260px] w-full bg-[#D63C3D] gap-4 justify-center items-center    sm:flex sm:flex-row sm:gap-8 ">
-                    <div className="flex items-center">
-                        <img src={talk} alt="CTA按鈕" className="" />
+                <div className="flex flex-col h-[180px] max-lg:h-[180px] max-sm:h-[260px] w-full bg-[#D63C3D] gap-4 justify-center items-center sm:flex sm:flex-row sm:gap-8 transition-colors duration-300 hover:bg-gradient-to-r hover:from-[#D63C3D] hover:to-[#7A31C1]">
+                    <div className="flex items-center gap-3">
+                        <p className="text-white text-[32px] font-[400] tracking-[5px]">Let'talk</p>
+                        {/* <img src={talk} alt="CTA按鈕" className="" /> */}
+                        <img src={talk_gif} alt="CTA按鈕" className="w-[40px] h-[40px]"/>
                     </div>
                     <p className="text-white text-[18px] font-regular w-[240px]  lg:w-[420px] lg:text-[24px]  sm:text-start sm:text-[18px] sm:w-[240px]">和我們聊聊您的需求，一同定義未來願景
                         共同打造更優質的無障礙體驗</p>

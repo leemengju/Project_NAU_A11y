@@ -9,7 +9,7 @@ const Navbar = () => {
           <div className="flex items-center">
             <img src={logo} alt="公司網站標誌logo" className="" />
           </div>
-          <Button className="rounded-full bg-[#DC3545] text-2xl font-bold lg:text-2xl md:text-1xl sm:text-md" aria-label="聯繫我們按鈕">
+          <Button className="rounded-full p-5 bg-[#DC3545]  font-[600] text-xl max-lg:text-md max-md:text-sm  max-md:p-4 transform transition-transform duration-300 hover:scale-105 hover:bg-gradient-to-r hover:from-[#D63C3D] hover:to-[#7A31C1]  " aria-label="聯繫我們按鈕" >
             <span className="text-white font-semibold">聯繫我們</span>
           </Button>
         </nav>
