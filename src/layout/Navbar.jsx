@@ -1,15 +1,15 @@
 import "../index.css";
-import logo from "../assets/layout/logo_L.png";
-import { Button } from "@/components/ui/button"
+import logo from "../assets/layout/LoGO_L.svg";
+import { Button } from "@/components/ui/button";
 
 const Navbar = () => {
     return (
       <>
-        <nav className="bg-[#1A1313] flex justify-between items-center px-4 py-2 fixed top-0 left-0 right-0 z-10 h-[80px] w-full lg:px-8 lg:py-4 md:px-6 md:py-3 sm:px-4 sm:py-2" aria-label="主導航">
+        <nav className="bg-[#1A1313] flex justify-between items-center px-4 py-2 top-0 left-0 right-0 z-10 h-[80px] w-full lg:px-8 lg:py-4 md:px-6 md:py-3 sm:px-4 sm:py-2" aria-label="主導航">
           <div className="flex items-center">
             <img src={logo} alt="公司網站標誌logo" className="" />
           </div>
-          <Button className="rounded-full bg-[#DC3545] text-2xl font-bold lg:text-3xl md:text-2xl sm:text-xl" aria-label="聯繫我們按鈕">
+          <Button className="rounded-full bg-[#DC3545] text-2xl font-bold lg:text-2xl md:text-1xl sm:text-md" aria-label="聯繫我們按鈕">
             <span className="text-white font-semibold">聯繫我們</span>
           </Button>
         </nav>

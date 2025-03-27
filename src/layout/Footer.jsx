@@ -1,14 +1,12 @@
 import "../index.css";
-import talk from "../assets/layout/talk.png";
+import talk from "../assets/layout/talk.svg";
 import facebook from "../assets/layout/facebook.png";
 import instagram from "../assets/layout/instagram.png";
 import Medium from "../assets/layout/Medium.png";
 import youtube from "../assets/layout/youtube.png";
 import Spotify from "../assets/layout/Spotify.png";
+import logo_footer from "../assets/layout/LOGO_S.svg";
 
-
-import logo_footer from "../assets/layout/logo_s.png";
-import { Button } from "@/components/ui/button"
 
 
 
@@ -16,7 +14,7 @@ const Footer = () => {
     return (
         < >
             <div className=" w-full">
-                <div className="flex flex-col h-[260px] w-full bg-[#D63C3D] gap-4 justify-center items-center  py-[100px]  sm:flex sm:flex-row sm:gap-8 ">
+                <div className="flex flex-col h-[180px] max-lg:h-[180px] max-sm:h-[260px] w-full bg-[#D63C3D] gap-4 justify-center items-center    sm:flex sm:flex-row sm:gap-8 ">
                     <div className="flex items-center">
                         <img src={talk} alt="CTA按鈕" className="" />
                     </div>
