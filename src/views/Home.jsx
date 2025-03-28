@@ -148,7 +148,7 @@ const Home = () => {
           <article className="card flex flex-col justify-center items-start bg-white rounded-2xl shadow-lg w-[234px] max-sm:w-[320px] transform transition-transform duration-300 hover:scale-105">
             <figure className="w-full h-36 rounded-3xl max-sm:h-60">
               <img
-                src="https://cdn.builder.io/api/v1/image/assets/TEMP/bcff2beea473cf67d8f43a14fa15b4f7ffd1267b"
+                src={article_1}
                 alt=""
                 className="w-full h-full object-cover rounded-t-[15px] "
               />
@@ -216,7 +216,7 @@ const Home = () => {
       </section>
 
       {/* workshop */}
-      <section className="flex flex-col py-16 items-center w-full bg-[#F4F4F4]">
+      <section className="flex flex-col pb-16 items-center w-full bg-[#F4F4F4]">
         {/* workshop_top */}
         <header className="flex flex-col gap-0.5 items-start pt-24 max-w-[732px] w-[732px] max-md:px-6 max-md:w-full max-sm:pt-11">
           <h2 className="w-full text-base font-bold leading-6 text-red-500 tracking-[2px]">
