@@ -22,7 +22,7 @@ const Collection_workshop = () => {
         <section className=" flex flex-row flex-wrap justify-between gap-4 w-[1240px]  max-lg:flex-col max-lg:items-center  max-lg:w-full  ">
           
 
-          <article className=" card flex flex-col  rounded-2xl  w-[600px] max-sm:w-[320px] max-sm:shadow-lg transform transition-transform duration-300 hover:scale-105">
+          <article onClick={()=>window.location.href="/workshop_article_1"} className=" card flex flex-col  rounded-2xl  w-[600px] max-sm:w-[320px] max-sm:shadow-lg transform transition-transform duration-300 hover:scale-105">
             {/* 卡片圖片 */}
             <figure className="w-full h-[340px] rounded-3xl shadow-lg max-sm:h-60 max-sm:shadow-none">
               <img
@@ -46,7 +46,7 @@ const Collection_workshop = () => {
               </div>
             </div>
           </article>
-          <article className=" card flex flex-col  rounded-2xl  w-[600px] max-sm:w-[320px] max-sm:shadow-lg transform transition-transform duration-300 hover:scale-105">
+          <article onClick={()=>window.location.href="/workshop_article_2"} className=" card flex flex-col  rounded-2xl  w-[600px] max-sm:w-[320px] max-sm:shadow-lg transform transition-transform duration-300 hover:scale-105">
             {/* 卡片圖片 */}
             <figure className="w-full h-[340px] rounded-3xl shadow-lg max-sm:h-60 max-sm:shadow-none">
               <img

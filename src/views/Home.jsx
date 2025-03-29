@@ -1,21 +1,21 @@
-import React from 'react'
+import React from 'react';
 import "../index.css";
-import mission_pics from '../assets/home/mission.svg'
-import banner from '../assets/home/banner.svg'
-import toolkits from '../assets/home/toolkits.svg'
-import ArrowRight, { ArrowRightWithStroke } from '../components/icons'
-import workshop_pics from '../assets/home/workshop_main.svg'
-import article_1 from '../assets/home/article_1.svg'
-import article_2 from '../assets/home/article_2.svg'
-import article_3 from '../assets/home/article_3.svg'
-import article_4 from '../assets/home/article_4.svg'
-import article_5 from '../assets/home/article_5.svg'
-import { Button } from "@/components/ui/button"
-import logo from '../assets/layout/LOGO_L.svg'
+import mission_pics from '../assets/home/mission.svg';
+import banner from '../assets/home/banner.svg';
+import toolkits from '../assets/home/toolkits.svg';
+import ArrowRight, { ArrowRightWithStroke } from '../components/icons';
+import workshop_pics from '../assets/home/workshop_main.svg';
+import article_1 from '../assets/home/article_1.svg';
+import article_2 from '../assets/home/article_2.svg';
+import article_3 from '../assets/home/article_3.svg';
+import article_4 from '../assets/home/article_4.svg';
+import article_5 from '../assets/home/article_5.svg';
+import { Button } from "@/components/ui/button";
+import logo from '../assets/layout/LOGO_L.svg';
 import {
   Menu
-} from "lucide-react"
-import { useState } from "react"
+} from "lucide-react";
+import { useState } from "react";
 
 const Home = () => {
   // 側邊選單
@@ -194,7 +194,7 @@ const Home = () => {
 
         {/* knowledge_cardsRow */}
         <section className=" flex flex-row gap-4 py-4 w-[732px] max-sm:flex-col max-sm:px-9 max-sm:justify-center max-sm:w-[390px] ">
-          <article className="card flex flex-col justify-center items-start bg-white rounded-2xl shadow-lg w-[234px] max-sm:w-[320px] transform transition-transform duration-300 hover:scale-105">
+          <article onClick={()=>window.location.href="/informative_article_1"} className="card flex flex-col justify-center items-start bg-white rounded-2xl shadow-lg w-[234px] max-sm:w-[320px] transform transition-transform duration-300 hover:scale-105">
             <figure className="w-full h-36 rounded-3xl max-sm:h-60">
               <img
                 src={article_1}
@@ -216,7 +216,7 @@ const Home = () => {
               </div>
             </div>
           </article>
-          <article className="card flex flex-col justify-center items-start bg-white rounded-2xl shadow-lg w-[234px] max-sm:w-[320px] transform transition-transform duration-300 hover:scale-105">
+          <article onClick={()=>window.location.href="/informative_article_2"} className="card flex flex-col justify-center items-start bg-white rounded-2xl shadow-lg w-[234px] max-sm:w-[320px] transform transition-transform duration-300 hover:scale-105">
             <figure className="w-full h-36 rounded-3xl max-sm:h-60">
               <img
                 src={article_2}
@@ -238,7 +238,7 @@ const Home = () => {
               </div>
             </div>
           </article>
-          <article className="card flex flex-col justify-center items-start bg-white rounded-2xl shadow-lg w-[234px] max-sm:w-[320px] transform transition-transform duration-300 hover:scale-105">
+          <article onClick={()=>window.location.href="/informative_article_3"} className="card flex flex-col justify-center items-start bg-white rounded-2xl shadow-lg w-[234px] max-sm:w-[320px] transform transition-transform duration-300 hover:scale-105">
             <figure className="w-full h-36 rounded-3xl max-sm:h-60">
               <img
                 src={article_3}
@@ -303,7 +303,7 @@ const Home = () => {
 
         {/* workshop_cardsRow */}
         <section className=" flex flex-row gap-4 py-4 w-[732px] max-sm:flex-col max-sm:px-9 max-sm:justify-center max-sm:w-[390px] ">
-          <article className="card flex flex-col justify-center items-start bg-white rounded-2xl shadow-lg w-[234px] max-sm:w-[320px]  transform transition-transform duration-300 hover:scale-105">
+          <article onClick={()=>window.location.href="/workshop_article_1"} className="card flex flex-col justify-center items-start bg-white rounded-2xl shadow-lg w-[234px] max-sm:w-[320px]  transform transition-transform duration-300 hover:scale-105">
             <figure className="w-full h-36 rounded-3xl max-sm:h-60">
               <img
                 src={article_4}
@@ -325,7 +325,7 @@ const Home = () => {
               </div>
             </div>
           </article>
-          <article className=" card flex flex-col justify-center items-start bg-white rounded-2xl shadow-lg w-[234px] max-sm:w-[320px] transform transition-transform duration-300 hover:scale-105 ">
+          <article onClick={()=>window.location.href="/workshop_article_2"} className=" card flex flex-col justify-center items-start bg-white rounded-2xl shadow-lg w-[234px] max-sm:w-[320px] transform transition-transform duration-300 hover:scale-105 ">
             <figure className="w-full h-36 rounded-3xl max-sm:h-60">
               <img
                 src={article_5}
