@@ -1,3 +1,5 @@
+import React from 'react'
+import "../index.css";
 import mission_pics from '../assets/home/mission.svg'
 import banner from '../assets/home/banner.svg'
 import toolkits from '../assets/home/toolkits.svg'
@@ -9,11 +11,56 @@ import article_3 from '../assets/home/article_3.svg'
 import article_4 from '../assets/home/article_4.svg'
 import article_5 from '../assets/home/article_5.svg'
 import { Button } from "@/components/ui/button"
-
+import logo from '../assets/layout/LOGO_L.svg'
+import {
+  Menu
+} from "lucide-react"
+import { useState } from "react"
 
 const Home = () => {
+  // 側邊選單
+  const [isOpen, setIsOpen] = useState(false);
+
+
   return (
     <>
+    {/* 固定導航 */}
+      <nav className="fixed navbar_home bg-[#1A1313] flex justify-between items-center px-4 py-2 top-0 left-0 right-0 z-10 h-[80px] w-full lg:px-8 lg:py-4 md:px-6 md:py-3 sm:px-4 sm:py-2" aria-label="主導航">
+        {/* 左邊 */}
+        <div className="flex items-center max-sm:items-start">
+          <a href="/home">
+            <img src={logo} alt="公司網站標誌logo" className="max-sm:w-[100px] cursor-pointer" />
+          </a>
+        </div>
+
+        {/* 右邊 */}
+        <div className="flex justify-end items-center gap-5">
+          <a href="#knowledge" className="text-white font-regular cursor-pointer hover:text-[#D4B0F7] transition-colors duration-300 max-sm:hidden">知識補給</a>
+          <a href="#workshop" className="text-white font-regular cursor-pointer hover:text-[#D4B0F7] transition-colors duration-300 max-sm:hidden">共創實績</a>
+          <a href="#toolkits" className="text-white font-regular cursor-pointer hover:text-[#D4B0F7] transition-colors duration-300 max-sm:hidden">數位無障礙工具包</a>
+          <Button onClick={() => window.open("https://www.uxi-design.com/connect", "_blank")} className="rounded-full p-5 bg-[#DC3545]  font-[600] text-xl max-lg:text-md max-md:text-sm  max-md:p-4 transform transition-transform duration-300 hover:scale-105 hover:bg-gradient-to-r hover:from-[#D63C3D] hover:to-[#7A31C1]  " aria-label="聯繫我們按鈕">
+            <span className="text-white font-semibold">聯繫我們</span>
+          </Button>
+          {/* menu */}
+          <div className="relative sm:hidden">
+            {/* 執行setIsOpen函數，當點擊時，isOpen的值會被切換為true或false */}
+            <Menu onClick={() => setIsOpen(!isOpen)} className="text-white cursor-pointer" />
+            {/* 下拉選單 */}
+            {/* 這段是條件渲染的寫法，意味著當 isOpen 為 true 時，下方的 <div> 元素才會被渲染並顯示。若 isOpen 是 false，則不會渲染下拉選單。 */}
+            {isOpen && (
+              <div className="layoutDropdown absolute right-[-20px] mt-2 w-[400px] bg-[#1A1313] rounded-md shadow-lg z-20">
+                <a href="#knowledge" className="block px-4 py-2 text-white hover:bg-[#5E3587]">知識補給</a>
+                <a href="#workshop" className="block px-4 py-2 text-white hover:bg-[#5E3587]">共創實績</a>
+                <a href="#toolkits" className="block px-4 py-2 text-white hover:bg-[#5E3587]">數位無障礙工具包</a>
+              </div>
+            )}
+          </div>
+          {/* end of menu */}
+        </div>
+        {/* end of right */}
+      </nav>
+      {/* end of fixed navbar */}
+
 
       {/* banner */}
       <div
@@ -44,6 +91,8 @@ const Home = () => {
           </div>
         </section>
       </div>
+      {/* end of banner */}
+
       {/* mission */}
       {/* mission_top  */}
       <section className=" flex flex-col gap-0.5 justify-center items-center w-full bg-[#1A1313] pb-24 lg:px-[60px] lg:py-[90px] " >
@@ -107,7 +156,7 @@ const Home = () => {
 
       </section>
       {/* knowledge */}
-      <section className="flex flex-col items-center w-full bg-[#F4F4F4]">
+      <section id="knowledge" className="knowledge flex flex-col items-center w-full bg-[#F4F4F4]">
         {/* knowledge_top */}
         <header className="flex flex-col gap-0.5 items-start pt-24 max-w-[732px] w-[732px] max-md:px-6 max-md:w-full max-sm:pt-11">
           <h2 className="w-full text-base font-bold leading-6 text-red-500 tracking-[2px]">
@@ -135,7 +184,7 @@ const Home = () => {
           <h2 className="text-xl leading-8 font-[350] text-stone-700 tracking-[3px]">
             精選文章
           </h2>
-          <a href="#" className="flex items-center cursor-pointer transform transition-transform duration-300 hover:scale-110">
+          <a href="/collection_knowledge" className="flex items-center cursor-pointer transform transition-transform duration-300 hover:scale-110">
             <span className="pr-2.5 text-lg leading-7 text-stone-600 tracking-[2.4px]">
               more
             </span>
@@ -216,7 +265,7 @@ const Home = () => {
       </section>
 
       {/* workshop */}
-      <section className="flex flex-col pb-16 items-center w-full bg-[#F4F4F4]">
+      <section id="workshop" className="workshop flex flex-col pb-16 items-center w-full bg-[#F4F4F4]">
         {/* workshop_top */}
         <header className="flex flex-col gap-0.5 items-start pt-24 max-w-[732px] w-[732px] max-md:px-6 max-md:w-full max-sm:pt-11">
           <h2 className="w-full text-base font-bold leading-6 text-red-500 tracking-[2px]">
@@ -244,7 +293,7 @@ const Home = () => {
           <h2 className="text-xl leading-8 font-[350] text-stone-700 tracking-[3px]">
             精選文章
           </h2>
-          <a href="#" className="flex items-center cursor-pointer transform transition-transform duration-300 hover:scale-110">
+          <a href="/collection_workshop" className="flex items-center cursor-pointer transform transition-transform duration-300 hover:scale-110">
             <span className="pr-2.5 text-lg leading-7 text-stone-600 tracking-[2.4px]">
               more
             </span>
@@ -303,7 +352,7 @@ const Home = () => {
 
 
       {/* toolkits */}
-      <section className="flex flex-row gap-12 justify-center items-center w-full py-16 px-6 max-lg:gap-7  max-sm:flex-col max-sm:px-9 ">
+      <section id="toolkits" className="toolkits flex flex-row gap-12 justify-center items-center w-full py-16 px-6 max-lg:gap-7  max-sm:flex-col max-sm:px-9 ">
         {/* toolkits_leftpart */}
         <div className=" flex flex-col gap-6 justify-center items-start w-[434px] max-md:w-full">
           <article className="flex flex-col gap-px justify-center items-start w-[434px] max-md:w-full">
@@ -360,7 +409,7 @@ const Home = () => {
             </ul>
           </article>
 
-          <Button className="rounded-full p-5 bg-[#DC3545]  font-[600] text-xl max-lg:text-md max-md:text-sm  max-md:p-4 transform transition-transform duration-300 hover:scale-105 hover:bg-gradient-to-r hover:from-[#D63C3D] hover:to-[#7A31C1]  " aria-label="聯繫我們按鈕">
+          <Button onClick={() => window.open("https://www.uxi-design.com/connect", "_blank")} className="rounded-full p-5 bg-[#DC3545]  font-[600] text-xl max-lg:text-md max-md:text-sm  max-md:p-4 transform transition-transform duration-300 hover:scale-105 hover:bg-gradient-to-r hover:from-[#D63C3D] hover:to-[#7A31C1]  " aria-label="聯繫我們按鈕">
             <span className="text-white font-semibold">聯繫我們</span>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" className="size-5 stroke-white max-md:size-4">
               <path fill-rule="evenodd" d="M12.97 3.97a.75.75 0 0 1 1.06 0l7.5 7.5a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 1 1-1.06-1.06l6.22-6.22H3a.75.75 0 0 1 0-1.5h16.19l-6.22-6.22a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
