@@ -1,7 +1,7 @@
 import React from "react";
 import { ChevronLeft } from "lucide-react";
 
-const ArticleK_2 = () => {
+const Informative_article_2 = () => {
   const articleContent = [
     {
       type: "header",
@@ -147,4 +147,4 @@ const ArticleK_2 = () => {
   );
 };
 
-export default ArticleK_2;
+export default Informative_article_2;

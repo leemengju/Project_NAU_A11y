@@ -1,4 +1,3 @@
-
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Layout_inline from "../layout/Layout_inline";
@@ -11,6 +10,7 @@ import Informative_article_2 from "../views/Informative_article_2";
 import Informative_article_3 from "../views/Informative_article_3";
 import Workshop_article_1 from "../views/Workshop_article_1";
 import Workshop_article_2 from "../views/Workshop_article_2";
+
 
 function AppRouter() {
   return (
@@ -28,7 +28,8 @@ function AppRouter() {
           <Route path="informative_article_2" element={<Informative_article_2 />} />
           <Route path="informative_article_3" element={<Informative_article_3 />} />
           <Route path="workshop_article_1" element={<Workshop_article_1 />} />
-          <Route path="workshop_article_2" element={<Workshop_article_2 />} />  
+          <Route path="workshop_article_2" element={<Workshop_article_2 />} /> 
+      
         </Route>
 
 

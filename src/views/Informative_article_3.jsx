@@ -1,7 +1,17 @@
 import React from "react";
 import { ChevronLeft } from "lucide-react";
+import { Ellipsis } from "lucide-react";
+import p1 from "../assets/informative_article_3/p1.svg";
+import p2 from "../assets/informative_article_3/p2.svg";
+import p3 from "../assets/informative_article_3/p3.svg";
+import p4 from "../assets/informative_article_3/p4.svg";
+import p5 from "../assets/informative_article_3/p5.svg";
+import p6 from "../assets/informative_article_3/p6.svg";
+import p7 from "../assets/informative_article_3/p7.svg";
+import p8 from "../assets/informative_article_3/p8.svg";
+import p9 from "../assets/informative_article_3/p9.svg";
 
-const ArticleK_3 = () => {
+const Informative_article_3 = () => {
   const articleContent = [
     {
       type: "header",
@@ -13,11 +23,10 @@ const ArticleK_3 = () => {
                 回到文章彙總
             </h4>
           <h1 className="mb-1.5 text-3xl font-bold tracking-wide leading-10 text-stone-700 max-sm:text-2xl max-sm:leading-9">
-            建立數位無障礙的三大思維
+          無障礙案例分享：電動遊戲
           </h1>
           <p className="mb-6 text-base tracking-wider leading-6 font-[350] text-stone-600 max-sm:text-sm max-sm:leading-5">
-            1. 從同理心出發 2. 建構無障礙產品是「整個團隊」的事 3.
-            學習無止盡，擁抱成長心態
+          身心障礙玩家如何一起加入遊戲世界？
           </p>
           <time dateTime="2024-10-28" className="text-base leading-5 font-[350] text-stone-700">
             2024-10-28
@@ -32,96 +41,205 @@ const ArticleK_3 = () => {
           <div className="mb-3.5">
             <p className="text-xs leading-5">
               <span>原文連結｜</span>
-              <a href="https://medium.com/uxi-design/%E5%BB%BA%E7%AB%8B%E6%95%B8%E4%BD%8D%E7%84%A1%E9%9A%9C%E7%A4%99%E7%9A%84%E4%B8%89%E5%A4%A7%E6%80%9D%E7%B6%AD-9b34dc940b92" className="text-gray-900 " style={{ textDecoration: 'underline' }}>Medium 文章</a>
+              <a href="https://medium.com/uxi-design/%E9%9B%BB%E7%8E%A9%E9%81%8A%E6%88%B2%E7%84%A1%E9%9A%9C%E7%A4%99-%E8%BA%AB%E5%BF%83%E9%9A%9C%E7%A4%99%E7%8E%A9%E5%AE%B6%E5%A6%82%E4%BD%95%E4%B8%80%E8%B5%B7%E5%8A%A0%E5%85%A5%E9%81%8A%E6%88%B2%E4%B8%96%E7%95%8C-faba7e228c96" className="text-gray-900 " style={{ textDecoration: 'underline' }}>Medium 文章</a>
             </p>
           </div>
           <p className="mb-5 text-lg leading-8 max-sm:text-base max-sm:leading-7">
-            近年來，不論是 DEI (Diversity, equity, and inclusion；多元、平等與包容性)
-            意識抬頭，或是無障礙設計的浪潮，都鼓勵我們聆聽以往被忽略的聲音、關注不同群體的需求。
+          你喜歡玩電動遊戲嗎？你可以想像有行動障礙的人要如何玩遊戲嗎？為了讓每個人都可以享受遊戲，遊戲平台和開發商也正在積極推動無障礙設計。這篇文章會介紹現在市面上的遊戲廠商如何透過設計來幫助身心障礙人士更好享受遊戲！
+          </p>
+          <p className="font-bold mb-5 text-xl leading-8 max-sm:text-base max-sm:leading-7">
+          無障礙控制器
           </p>
           <p className="mb-5 text-lg leading-8 max-sm:text-base max-sm:leading-7">
-            <span>
-              當我們試著去了解少數群體的需要，不同的設計概念隨之浮現。經常提到的三種類型分別為：無障礙設計、包容性設計、通用設計。先前遊石有發表一篇文章
-            </span>
-            <a href="https://medium.com/uxi-design/%E6%9B%B4%E5%8F%8B%E5%96%84%E7%9A%84%E6%9C%AA%E4%BE%86-%E6%B7%BA%E8%AB%87%E5%8C%85%E5%AE%B9%E6%80%A7%E8%A8%AD%E8%A8%88-674ffe54a245" className="text-gray-900 " style={{ textDecoration: 'underline' }}>
-              〈更友善的未來：淺談包容性設計〉
-            </a>
-            <span>
-              ，介紹包容性設計的精神，它與無障礙、通用設計之間的區別。有興趣的話，歡迎大家閱讀，了解三者的不同。
-            </span>
+          遊戲的無障礙硬體設計，通常是為了讓人能更容易或用更多元的方式操控遊戲。一般的遊戲控制器的使用方式通常需要雙手都可以穩定地維持一個抓握的姿勢，而且搖桿也需要精細的手指操作，這對手部控制能力比較不好的人來說，是很難達成的條件。
           </p>
           <p className="mb-5 text-lg leading-8 max-sm:text-base max-sm:leading-7">
-            儘管存在細微的差異，無障礙設計、包容性設計、通用設計的初衷與本質是一致的。這三種設計都是希望幫助所有使用者，設計出好用、友善的數位產品。為了建立一個更加包容和多元化的社會，透過確保產品和服務對所有人都可用和可理解，我們能夠消除對於身體能力、年齡、技能或其他特殊需求的歧視和排斥。這不僅在個人層面上的尊重，也為社會創造了一個更加平等的環境。
+          近年來，主要遊戲廠商紛紛推出了專門的無障礙控制器，為不同需求的玩家提供更好的遊戲體驗，例如微軟的 Xbox Adaptive Controller、Sony 的 PlayStation Access Controller，以及非營利組織 Our Odyssey 設計的 Overjoyed。
           </p>
-          <figure className="mx-0 my-5 w-full">
+          <p className="font-bold mb-5 text-lg leading-8 max-sm:text-base max-sm:leading-7">
+          Xbox Adaptive ControllerXbox Adaptive Controller
+          </p>
+          <figure className="mx-0 w-full">
             <img
-              src="https://cdn.builder.io/api/v1/image/assets/TEMP/a388b96425c609a6710528344cde7ad4398e2195"
+              src={p1}
               className="w-full h-auto"
-              alt="淺談包容性設計、通用設計與無障礙設計文章縮圖。「無障礙設計」聚焦於輔助身障與高齡使用者的使用情境；「通用設計」希望符合所有群體，盡可能讓特殊族群跟一般使用者可使用同樣行為達成目的；而「包容性設計」為有意識的考量使用群體的多樣性，不僅考量行動上的限制，也需考量使用上的心理情境。"
+              alt="Xbox Adaptive Controller"
             />
           </figure>
+          <p className="flex justify-center mb-5 text-lg leading-8 max-sm:text-base max-sm:leading-7">
+          Xbox Adaptive Controller /
+圖片來源：Xbox
+          </p>
+
+
           <p className="mb-5 text-lg leading-8 max-sm:text-base max-sm:leading-7">
-            上圖中，在內圈的無障礙設計已經成為開發產品和實體服務的重要原則之一。無論身體上的限制、視覺或聽覺上的困難，或是技術能力的差異，每個人都應該能夠輕鬆地瀏覽網站、使用應用程式和參與數位互動。
+          Xbox Adaptive Controller 提供了 19 個外部接口以及豐富的輔助設備生態系統，可以同時連接各種專業的設備，像是讓人們可以單手操作的特製搖桿（PDP）、腳部操作的踏板控制器（3DRudder），甚至是吹吸控制器（QuadStick）。
           </p>
           <p className="mb-5 text-lg leading-8 max-sm:text-base max-sm:leading-7">
-            在開始建立無障礙之前，如果你在心中保有三個關鍵思維，往後在實踐無障礙的路上會更順利。
+          這種開放性設計大大擴展了控制器的應用範圍，使其能夠滿足更多特殊需求。無法透過肢體來進行精細操作的使用者可以利用按鈕、單手搖桿或踏板來操作，障礙程度更高者也可以使用吹吸控制器來遊玩遊戲。這些設備讓遊戲對於身體動作的要求更低，更可及。
           </p>
-          <h2 className="mx-0 mt-6 mb-2.5 text-lg font-bold leading-6 text-gray-900">
-            建構無障礙產品是「整個團隊」的事
-          </h2>
-          <figure className="mx-0 my-5 w-full">
+
+          <figure className="mx-0 w-full">
             <img
-              src="https://cdn.builder.io/api/v1/image/assets/TEMP/d374c7faf16bcc8f73b5f538a53f91809260e023"
+              src={p2}
               className="w-full h-auto"
-              alt="產品開發流程簡圖：共六階段。第一階段、產品發想，集思廣益來構想產品概念。第二階段、產品定義，界定產品範疇與概念，完善產品策略。第三階段、原型設計，以原型來進行深入的評估、確認關鍵功能等。第四階段、驗證與測試，確認正式發佈前，每個面向的可行性。第五階段、產品開發，實際開發與逐步迭代。第六階段、測試與上線，品質測試與確認最終產品上線。"
+              alt="Xbox Adaptive Controller"
             />
           </figure>
+          <p className="flex justify-center mb-5 text-lg leading-8 max-sm:text-base max-sm:leading-7">
+          可外接多個按鈕協助操作 /
+圖片來源：Xbox Canada
+
+          </p>
+
+
+          <figure className="mx-0 w-full">
+            <img
+              src={p3}
+              className="w-full h-auto"
+              alt=" 與 3DRudder 踏板相接，可無手操作"
+            />
+          </figure>
+          <p className="flex justify-center  text-lg leading-8 max-sm:text-base max-sm:leading-7">
+          與 3DRudder 踏板相接，可無手操作 
+          </p>
+          <p className="flex justify-center mb-5 text-lg leading-8 max-sm:text-base max-sm:leading-7">
+          /
+          圖片來源：The Fox Magzine
+          </p>
+
+          
+
+          
+          <p className="font-bold mb-5 text-lg leading-8 max-sm:text-base max-sm:leading-7">
+          PlayStation Access Controller 
+          </p>
+
+          <figure className="mx-0 w-full">
+            <img
+              src={p4}
+              className="w-full h-auto"
+              alt="PlayStation Access Controller"
+            />
+          </figure>
+          <p className="flex justify-center mb-5 text-lg leading-8 max-sm:text-base max-sm:leading-7">
+          PlayStation Access Controller /
+          圖片來源：SONY
+          </p>
+
+
           <p className="mb-5 text-lg leading-8 max-sm:text-base max-sm:leading-7">
-            有些團隊在不熟悉無障礙設計的情況下，會安排在產品後期導入無障礙，期待能一次性解決所有無障礙問題來取得標章。實際上，在產品上線前才投入無障礙，會花費許多資源與成本，加重團隊成員的負擔。
+          PlayStation Access Controller 的特點則是可調整度非常高，每個整個控制器的按鍵位置都可以自己搭配，也提供不同形狀的按鈕，搖桿的距離可以調整，形狀也有多種選擇。為多種身心障礙玩家提供了極大的便利。對於行動不便的玩家，能夠根據自身的活動範圍設置最舒適的操作方式；對於手部肌肉控制能力較弱的玩家，可以選擇較大的按鍵或特殊形狀的控制桿。模組化設計也便於照護者根據玩家的需求快速調整設置，使得更多不同類型的身心障礙玩家能夠享受遊戲樂趣。
+          </p>
+
+          <figure className="mx-0 w-full">
+            <img
+              src={p5}
+              className="w-full h-auto"
+              alt="可調整按鈕配置、替換操作桿帽"
+            />
+          </figure>
+          <p className="flex justify-center mb-5 text-lg leading-8 max-sm:text-base max-sm:leading-7">
+          可調整按鈕配置、替換操作桿帽 /
+          圖片來源：SONY
+          </p>
+
+
+          <p className="mb-5 text-lg leading-8 max-sm:text-base max-sm:leading-7">
+           此外，每個按鍵都可以設置多個功能，可將複雜的按鍵組合簡化為單個按鍵。
+          </p>
+          <figure className="mx-0 w-full">
+            <img
+              src={p6}
+              className="w-full h-auto"
+              alt="高度可客製，可調整按鈕配置、替換操作桿帽"
+            />
+          </figure>
+          <p className="flex justify-center mb-5 text-lg leading-8 max-sm:text-base max-sm:leading-7">
+          一個按鍵被設定成「L3+R3」 /
+          圖片來源：PlayStaion
+          </p>
+
+
+          <p className="font-bold mb-5 text-lg leading-8 max-sm:text-base max-sm:leading-7">
+           Our Odyssey Overjoyed
+          </p>
+
+
+          <p className="mb-5 text-lg leading-8 max-sm:text-base max-sm:leading-7">
+           除了遊戲公司以外，也有非營利組織在設計無障礙控制器，例如 Our Odyssey。他們發現任天堂的無障礙需要經過一些對身心障礙人士很困難的操作才能設定，也有一些遊戲需要比較精細或困難的手部動作才能遊玩。於是他們製造了一款叫做 Overjoyed 的控制器，這款控制器是顯示在螢幕上的，再利用其他外接的設備進行操作。他們除了支援傳統的按鍵和搖桿操作，還整合了眼動追蹤和語音控制等先進技術。Our Odyssey 的產品支援了硬體設計相較不足的 Switch，提供想遊玩 Swtich 的玩家新的選擇。
+          </p>
+          <figure className="mx-0 w-full">
+            <img
+              src={p7}
+              className="w-full h-auto"
+              alt="Overjoyed 使用畫面"
+            />
+          </figure>
+          <p className="flex justify-center mb-5 text-lg leading-8 max-sm:text-base max-sm:leading-7">
+          Overjoyed 使用畫面 /
+          圖片來源：Assistive Technology Blog
+          </p>
+
+
+          <p className="mb-5 text-lg leading-8 max-sm:text-base max-sm:leading-7">
+          後來，Our Odyssey 也與 8BitDo 公司合作，推出實體控制器，也與其他公司的軟體相容，也可以當作電子閱讀器的翻頁器。
+          </p>
+          <figure className="mx-0 w-full">
+            <img
+              src={p8}
+              className="w-full h-auto"
+              alt="Overjoyed 與 8BitDo 合作的實體控制器"
+            />
+          </figure>
+          <p className="flex justify-center mb-5 text-lg leading-8 max-sm:text-base max-sm:leading-7">
+          實體控制器 /
+          圖片來源：GoNintendo
+          </p>
+
+          <br />
+          <Ellipsis  className="w-full flex justify-center"  color="#D9D9D9" />
+          <br />
+
+
+
+          <p className="font-bold mb-5 text-xl leading-8 max-sm:text-base max-sm:leading-7">
+          無障礙軟體功能
           </p>
           <p className="mb-5 text-lg leading-8 max-sm:text-base max-sm:leading-7">
-            理想中的情況是，在每個產品開發環節都導入與無障礙相關的步驟，這是無障礙成熟的團隊作法。在無障礙成熟之前，團隊成員需要嘗試不同方法將無障礙體驗融入產品開發流程，在達到目標的過程中形塑適應團隊協作的互動模式。
+          硬體的創新需要軟體的配合才能發揮最大效用。這個章節我們會介紹遊戲平台提供了哪些軟體上的無障礙設定，以及他們分別協助了哪些面向。
+          </p>
+          <p className="font-bold mb-5 text-lg leading-8 max-sm:text-base max-sm:leading-7">
+          視覺輔助
           </p>
           <p className="mb-5 text-lg leading-8 max-sm:text-base max-sm:leading-7">
-            <span>所謂的</span>
-            <strong className="font-bold text-gray-900">無障礙「成熟」</strong>
-            <span>
-              是什麼呢？以當時 2010 年的 Responsive Web Design（響應式網站設計）為例。在響應式網站概念與應用的初期，Mobile First Approach
-              （行動優先設計）對整個開發團隊帶來新改變、挫折與適應期，最終融入開發團隊的日常。十年多後的今天，網站響應使用者的螢幕設備已經成為基本要求。無障礙最終的「成熟」目標也是如此，將其融入日常程序，各個產品開發環節都考量到無障礙，最終無障礙會成為產品的其中一個面向。
-            </span>
+          Xbox、PlayStation 和 任天堂 Switch 都提供了螢幕朗讀功能，幫助視障玩家導航 menu 和理解遊戲內容。色彩校正和高對比度模式也是三大平台的共同功能，為色盲玩家和視力不佳的玩家提供了更好的視覺體驗。特別是任天堂 Switch 的反向顏色功能，在某些情況下可以大幅提升畫面的可讀性，雖然任天堂沒有提供常見的螢幕閱讀器支援和字體大小設定，但提供的 zoom 功能也可以放大畫面。
+          </p>
+          <p className="font-bold  mb-5 text-lg leading-8 max-sm:text-base max-sm:leading-7">
+          控制輔助
           </p>
           <p className="mb-5 text-lg leading-8 max-sm:text-base max-sm:leading-7">
-            建構無障礙產品是各個職能一同協作、合作的過程，不單是前後端工程師，或是品質管理專家的職責。
+          Xbox 和 Playstation 都允許同時使用兩個控制器操作，為需要協助的玩家提供了便利。而三大平台都支援按鍵重新配置，允許玩家自訂操控鍵。
           </p>
-          <h2 className="mx-0 mt-6 mb-2.5 text-lg font-bold leading-6 text-gray-900">
-            結語
-          </h2>
-          <blockquote className="pt-1 pr-0 pb-0 pl-4 mx-0 my-5 border-l border-solid border-l-[3px]">
-            <p className="mb-1 text-lg leading-8 text-gray-900">
-              無障礙是建立更平等的世界的關鍵。幾十年來，我們致力在開發和設計新技術時，參考身心障礙者的意見、專業知識和創意，設計出所有人都能使用的技術。
-            </p>
-            <cite className="text-lg leading-8 text-gray-700">蘋果執行長 Tim Cook</cite>
-          </blockquote>
-          <p className="mb-5 text-lg leading-8 max-sm:text-base max-sm:leading-7">
-            <span>這些新技術幫助了許多人，一週前，蘋果再次推出新的</span>
-            <a href="#" className="text-gray-900 underline">輔助技術</a>
-            <span>
-              。現在除了以語音輸入來打字，還能將輸入內容轉為語音。我們可以一邊使用放大鏡功能，一邊用手機辨識人事物、文字、符號和場景，甚至，在視訊的時候會有即時字幕支援。
-            </span>
+
+          <figure className="mx-0 w-full">
+            <img
+              src={p9}
+              className="w-full h-auto"
+              alt="Overjoyed 與 8BitDo 合作的實體控制器"
+            />
+          </figure>
+          <p className="flex justify-center mb-5 text-lg leading-8 max-sm:text-base max-sm:leading-7">
+          Xbox 提供的無障礙設定 /
+圖片來源：Xbox
           </p>
-          <p className="mb-5 text-lg leading-8 max-sm:text-base max-sm:leading-7">
-            <strong className="font-bold text-gray-900">從同理心出發</strong>
-            <span>，懷著無障礙的初衷，了解到數位無障礙是</span>
-            <strong className="font-bold text-gray-900">全體開發團隊都需要一同參與</strong>
-            <span>的面向，並且</span>
-            <strong className="font-bold text-gray-900">擁抱成長心態來實踐</strong>
-            <span>，這是在打造無障礙產品前，我們需要保有的思維。</span>
+
+
+          <p className="font-bold mb-5 text-xl leading-8 max-sm:text-base max-sm:leading-7">
+          結語
           </p>
           <p className="mb-5 text-lg leading-8 max-sm:text-base max-sm:leading-7">
-            掌握以上三大關鍵後，希望讓你與無障礙的距離更近了一步。接下來，我們會從設計與研究的角度出發，讓你了解身為產品設計師或設計研究員，能夠做什麼事情來幫助實踐數位無障礙。
-          </p>
-          <p className="mb-5 text-lg leading-8 max-sm:text-base max-sm:leading-7">
-            Let's do it!
+          Xbox、PlayStation 和 任天堂 Switch 都在推動遊戲無障礙，通過硬體創新、軟體改良和遊戲設計的改進，每個平台都有其獨特的方法和優勢。任天堂 Switch 雖然沒有專門的硬體，但其軟體設定還是有提供一定的靈活度，也鼓勵遊戲製作方提供遊戲內的無障礙設計。這些平台正在逐步消除障礙，讓更多玩家能夠享受遊戲的樂趣。大家可以期待看到更多創新的無障礙解決方案，以及一個更加開放和包容的遊戲文化！
           </p>
           <footer className="mt-9 text-sm leading-6">
             <p>
@@ -147,4 +265,4 @@ const ArticleK_3 = () => {
   );
 };
 
-export default ArticleK_3;
+export default Informative_article_3;

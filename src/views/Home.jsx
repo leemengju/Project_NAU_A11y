@@ -194,7 +194,7 @@ const Home = () => {
 
         {/* knowledge_cardsRow */}
         <section className=" flex flex-row gap-4 py-4 w-[732px] max-sm:flex-col max-sm:px-9 max-sm:justify-center max-sm:w-[390px] ">
-          <article onClick={()=>window.location.href="/informative_article_1"} className="card flex flex-col justify-center items-start bg-white rounded-2xl shadow-lg w-[234px] max-sm:w-[320px] transform transition-transform duration-300 hover:scale-105">
+          <article onClick={()=>window.location.href="/informative_article_1"} className="card flex flex-col justify-center items-start bg-white rounded-2xl shadow-lg w-[234px] max-sm:w-[320px] transform transition-transform duration-300 hover:scale-105 cursor-pointer">
             <figure className="w-full h-36 rounded-3xl max-sm:h-60">
               <img
                 src={article_1}
@@ -216,7 +216,7 @@ const Home = () => {
               </div>
             </div>
           </article>
-          <article onClick={()=>window.location.href="/informative_article_2"} className="card flex flex-col justify-center items-start bg-white rounded-2xl shadow-lg w-[234px] max-sm:w-[320px] transform transition-transform duration-300 hover:scale-105">
+          <article onClick={()=>window.location.href="/informative_article_2"} className="card flex flex-col justify-center items-start bg-white rounded-2xl shadow-lg w-[234px] max-sm:w-[320px] transform transition-transform duration-300 hover:scale-105 cursor-pointer">
             <figure className="w-full h-36 rounded-3xl max-sm:h-60">
               <img
                 src={article_2}
@@ -238,7 +238,7 @@ const Home = () => {
               </div>
             </div>
           </article>
-          <article onClick={()=>window.location.href="/informative_article_3"} className="card flex flex-col justify-center items-start bg-white rounded-2xl shadow-lg w-[234px] max-sm:w-[320px] transform transition-transform duration-300 hover:scale-105">
+          <article onClick={()=>window.location.href="/informative_article_3"} className="card flex flex-col justify-center items-start bg-white rounded-2xl shadow-lg w-[234px] max-sm:w-[320px] transform transition-transform duration-300 hover:scale-105 cursor-pointer">
             <figure className="w-full h-36 rounded-3xl max-sm:h-60">
               <img
                 src={article_3}
@@ -303,7 +303,7 @@ const Home = () => {
 
         {/* workshop_cardsRow */}
         <section className=" flex flex-row gap-4 py-4 w-[732px] max-sm:flex-col max-sm:px-9 max-sm:justify-center max-sm:w-[390px] ">
-          <article onClick={()=>window.location.href="/workshop_article_1"} className="card flex flex-col justify-center items-start bg-white rounded-2xl shadow-lg w-[234px] max-sm:w-[320px]  transform transition-transform duration-300 hover:scale-105">
+          <article onClick={()=>window.location.href="/workshop_article_1"} className="card flex flex-col justify-center items-start bg-white rounded-2xl shadow-lg w-[234px] max-sm:w-[320px]  transform transition-transform duration-300 hover:scale-105 cursor-pointer">
             <figure className="w-full h-36 rounded-3xl max-sm:h-60">
               <img
                 src={article_4}
@@ -325,7 +325,7 @@ const Home = () => {
               </div>
             </div>
           </article>
-          <article onClick={()=>window.location.href="/workshop_article_2"} className=" card flex flex-col justify-center items-start bg-white rounded-2xl shadow-lg w-[234px] max-sm:w-[320px] transform transition-transform duration-300 hover:scale-105 ">
+          <article onClick={()=>window.location.href="/workshop_article_2"} className=" card flex flex-col justify-center items-start bg-white rounded-2xl shadow-lg w-[234px] max-sm:w-[320px] transform transition-transform duration-300 hover:scale-105 cursor-pointer">
             <figure className="w-full h-36 rounded-3xl max-sm:h-60">
               <img
                 src={article_5}

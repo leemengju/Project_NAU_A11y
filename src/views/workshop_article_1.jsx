@@ -1,26 +1,24 @@
 import React from "react";
 import { ChevronLeft } from "lucide-react";
 
-const ArticleK_3 = () => {
+
+const Workshop_article_1 = () => {
   const articleContent = [
     {
       type: "header",
       content: (
         <header className="mb-16">
-            <h4 onClick={() => window.location.href='/collection_knowledge'} className=" flex flex-row items-center gap-1 mb-1.5 text-xl font-medium tracking-wide text-stone-700 max-sm:text-md max-sm:leading-9 underline">
-           
-                <ChevronLeft />
-                回到文章彙總
-            </h4>
+          <h4 onClick={() => window.location.href = '/collection_workshop'} className=" flex flex-row items-center gap-1 mb-1.5 text-xl font-medium tracking-wide text-stone-700 max-sm:text-md max-sm:leading-9 underline">
+
+            <ChevronLeft />
+            回到文章彙總
+          </h4>
           <h1 className="mb-1.5 text-3xl font-bold tracking-wide leading-10 text-stone-700 max-sm:text-2xl max-sm:leading-9">
-            建立數位無障礙的三大思維
+          數位無障礙設計：遊石設計企業內訓
           </h1>
-          <p className="mb-6 text-base tracking-wider leading-6 font-[350] text-stone-600 max-sm:text-sm max-sm:leading-5">
-            1. 從同理心出發 2. 建構無障礙產品是「整個團隊」的事 3.
-            學習無止盡，擁抱成長心態
-          </p>
-          <time dateTime="2024-10-28" className="text-base leading-5 font-[350] text-stone-700">
-            2024-10-28
+
+          <time dateTime="2024-11-20" className="text-base leading-5 font-[350] text-stone-700">
+            2024-11-20
           </time>
         </header>
       ),
@@ -29,106 +27,140 @@ const ArticleK_3 = () => {
       type: "section",
       content: (
         <section className="px-0 py-5 bg-white rounded max-sm:p-4">
-          <div className="mb-3.5">
-            <p className="text-xs leading-5">
-              <span>原文連結｜</span>
-              <a href="https://medium.com/uxi-design/%E5%BB%BA%E7%AB%8B%E6%95%B8%E4%BD%8D%E7%84%A1%E9%9A%9C%E7%A4%99%E7%9A%84%E4%B8%89%E5%A4%A7%E6%80%9D%E7%B6%AD-9b34dc940b92" className="text-gray-900 " style={{ textDecoration: 'underline' }}>Medium 文章</a>
-            </p>
-          </div>
+
           <p className="mb-5 text-lg leading-8 max-sm:text-base max-sm:leading-7">
-            近年來，不論是 DEI (Diversity, equity, and inclusion；多元、平等與包容性)
-            意識抬頭，或是無障礙設計的浪潮，都鼓勵我們聆聽以往被忽略的聲音、關注不同群體的需求。
+          我們以訪談的形式，隨機邀請三位完整參與課程並進行實作演練
+          的學員，與我們分享課程心得，以下為訪談內容的整理：
+          </p>
+          <p className="text-red-500 mb-5 text-lg leading-8 max-sm:text-base max-sm:leading-7">
+          Q：哪些課程內容或資源，能幫助你更理解無障礙設計概
+            念？
           </p>
           <p className="mb-5 text-lg leading-8 max-sm:text-base max-sm:leading-7">
-            <span>
-              當我們試著去了解少數群體的需要，不同的設計概念隨之浮現。經常提到的三種類型分別為：無障礙設計、包容性設計、通用設計。先前遊石有發表一篇文章
-            </span>
-            <a href="https://medium.com/uxi-design/%E6%9B%B4%E5%8F%8B%E5%96%84%E7%9A%84%E6%9C%AA%E4%BE%86-%E6%B7%BA%E8%AB%87%E5%8C%85%E5%AE%B9%E6%80%A7%E8%A8%AD%E8%A8%88-674ffe54a245" className="text-gray-900 " style={{ textDecoration: 'underline' }}>
-              〈更友善的未來：淺談包容性設計〉
-            </a>
-            <span>
-              ，介紹包容性設計的精神，它與無障礙、通用設計之間的區別。有興趣的話，歡迎大家閱讀，了解三者的不同。
-            </span>
+          學員 A：課程內容中提供的設計實作資源在實踐時非常受用，
+            此外，透過無障礙小工具（plugin），能協助留意實作的小細
+            節及建立無障礙設計概念。
           </p>
           <p className="mb-5 text-lg leading-8 max-sm:text-base max-sm:leading-7">
-            儘管存在細微的差異，無障礙設計、包容性設計、通用設計的初衷與本質是一致的。這三種設計都是希望幫助所有使用者，設計出好用、友善的數位產品。為了建立一個更加包容和多元化的社會，透過確保產品和服務對所有人都可用和可理解，我們能夠消除對於身體能力、年齡、技能或其他特殊需求的歧視和排斥。這不僅在個人層面上的尊重，也為社會創造了一個更加平等的環境。
-          </p>
-          <figure className="mx-0 my-5 w-full">
-            <img
-              src="https://cdn.builder.io/api/v1/image/assets/TEMP/a388b96425c609a6710528344cde7ad4398e2195"
-              className="w-full h-auto"
-              alt="淺談包容性設計、通用設計與無障礙設計文章縮圖。「無障礙設計」聚焦於輔助身障與高齡使用者的使用情境；「通用設計」希望符合所有群體，盡可能讓特殊族群跟一般使用者可使用同樣行為達成目的；而「包容性設計」為有意識的考量使用群體的多樣性，不僅考量行動上的限制，也需考量使用上的心理情境。"
-            />
-          </figure>
-          <p className="mb-5 text-lg leading-8 max-sm:text-base max-sm:leading-7">
-            上圖中，在內圈的無障礙設計已經成為開發產品和實體服務的重要原則之一。無論身體上的限制、視覺或聽覺上的困難，或是技術能力的差異，每個人都應該能夠輕鬆地瀏覽網站、使用應用程式和參與數位互動。
+          學員 B：課程中提及的元件互動方式、顏色對比度及替代文字
+            的撰寫，都能直接幫助到設計實作。此外，WebAIM 檢核表
+            工具幫助了解與開發合作的實踐要點，透過這些資源都能幫助
+            我建立無障礙思維與意識。
           </p>
           <p className="mb-5 text-lg leading-8 max-sm:text-base max-sm:leading-7">
-            在開始建立無障礙之前，如果你在心中保有三個關鍵思維，往後在實踐無障礙的路上會更順利。
+          學員 C：對於課程中提到的「對比度」特別有印象，光是一個
+            規範，就有很多落實上的注意事項，這也讓我了解到不是去死
+            記每條規範，而是要以使用者的角度去思考，這在理解規範有
+            很大的幫助。
           </p>
-          <h2 className="mx-0 mt-6 mb-2.5 text-lg font-bold leading-6 text-gray-900">
-            建構無障礙產品是「整個團隊」的事
-          </h2>
-          <figure className="mx-0 my-5 w-full">
-            <img
-              src="https://cdn.builder.io/api/v1/image/assets/TEMP/d374c7faf16bcc8f73b5f538a53f91809260e023"
-              className="w-full h-auto"
-              alt="產品開發流程簡圖：共六階段。第一階段、產品發想，集思廣益來構想產品概念。第二階段、產品定義，界定產品範疇與概念，完善產品策略。第三階段、原型設計，以原型來進行深入的評估、確認關鍵功能等。第四階段、驗證與測試，確認正式發佈前，每個面向的可行性。第五階段、產品開發，實際開發與逐步迭代。第六階段、測試與上線，品質測試與確認最終產品上線。"
-            />
-          </figure>
-          <p className="mb-5 text-lg leading-8 max-sm:text-base max-sm:leading-7">
-            有些團隊在不熟悉無障礙設計的情況下，會安排在產品後期導入無障礙，期待能一次性解決所有無障礙問題來取得標章。實際上，在產品上線前才投入無障礙，會花費許多資源與成本，加重團隊成員的負擔。
+          <p className="text-red-500 mb-5 text-lg leading-8 max-sm:text-base max-sm:leading-7">
+          Q：在實作練習時，哪些資源能提供你最大的幫助？
           </p>
           <p className="mb-5 text-lg leading-8 max-sm:text-base max-sm:leading-7">
-            理想中的情況是，在每個產品開發環節都導入與無障礙相關的步驟，這是無障礙成熟的團隊作法。在無障礙成熟之前，團隊成員需要嘗試不同方法將無障礙體驗融入產品開發流程，在達到目標的過程中形塑適應團隊協作的互動模式。
+          學員 A：本次課程內容豐富且充足，此外課堂中推薦的顏色對
+            比度分析器 CCA 也在實作中很有幫助。
           </p>
           <p className="mb-5 text-lg leading-8 max-sm:text-base max-sm:leading-7">
-            <span>所謂的</span>
-            <strong className="font-bold text-gray-900">無障礙「成熟」</strong>
-            <span>
-              是什麼呢？以當時 2010 年的 Responsive Web Design（響應式網站設計）為例。在響應式網站概念與應用的初期，Mobile First Approach
-              （行動優先設計）對整個開發團隊帶來新改變、挫折與適應期，最終融入開發團隊的日常。十年多後的今天，網站響應使用者的螢幕設備已經成為基本要求。無障礙最終的「成熟」目標也是如此，將其融入日常程序，各個產品開發環節都考量到無障礙，最終無障礙會成為產品的其中一個面向。
-            </span>
+    
+            學員 B：透過像 Microsoft 這樣的科技巨頭提供的開源資源，
+            我學到了如何實現良好的的無障礙設計，尤其是從他們的設計
+            文件中獲得啟發。
           </p>
           <p className="mb-5 text-lg leading-8 max-sm:text-base max-sm:leading-7">
-            建構無障礙產品是各個職能一同協作、合作的過程，不單是前後端工程師，或是品質管理專家的職責。
+          學員 C：透過課堂中的小練習環節，讓我對這些工具的操作和
+            使用方法加熟悉，在實作練習時能夠更加得心應手。另外，
+            Color review 選測小工具能更有效率的幫助定義色彩，很實
+            用。
           </p>
-          <h2 className="mx-0 mt-6 mb-2.5 text-lg font-bold leading-6 text-gray-900">
-            結語
-          </h2>
-          <blockquote className="pt-1 pr-0 pb-0 pl-4 mx-0 my-5 border-l border-solid border-l-[3px]">
-            <p className="mb-1 text-lg leading-8 text-gray-900">
-              無障礙是建立更平等的世界的關鍵。幾十年來，我們致力在開發和設計新技術時，參考身心障礙者的意見、專業知識和創意，設計出所有人都能使用的技術。
-            </p>
-            <cite className="text-lg leading-8 text-gray-700">蘋果執行長 Tim Cook</cite>
-          </blockquote>
-          <p className="mb-5 text-lg leading-8 max-sm:text-base max-sm:leading-7">
-            <span>這些新技術幫助了許多人，一週前，蘋果再次推出新的</span>
-            <a href="#" className="text-gray-900 underline">輔助技術</a>
-            <span>
-              。現在除了以語音輸入來打字，還能將輸入內容轉為語音。我們可以一邊使用放大鏡功能，一邊用手機辨識人事物、文字、符號和場景，甚至，在視訊的時候會有即時字幕支援。
-            </span>
+          <p className="text-red-500 mb-5 text-lg leading-8 max-sm:text-base max-sm:leading-7">
+          Q：在實作練習過程中，你遇到的三個最大的困難或挑戰
+          是什麼？你與團隊是如何克服它們？
+          </p>
+          <p className="text-zinc-400 mb-5 text-lg leading-8 max-sm:text-base max-sm:leading-7">
+          *實作演練說明：我們延續了競品分析的三大類別，並挑選了使用者常見
+            的流程環節，最終選定「醫療類別的掛號流程」與「金融類別的轉帳流
+            程」作為無障礙設計改版
           </p>
           <p className="mb-5 text-lg leading-8 max-sm:text-base max-sm:leading-7">
-            <strong className="font-bold text-gray-900">從同理心出發</strong>
-            <span>，懷著無障礙的初衷，了解到數位無障礙是</span>
-            <strong className="font-bold text-gray-900">全體開發團隊都需要一同參與</strong>
-            <span>的面向，並且</span>
-            <strong className="font-bold text-gray-900">擁抱成長心態來實踐</strong>
-            <span>，這是在打造無障礙產品前，我們需要保有的思維。</span>
+          學員 A：本次實作花了不少時間梳理原有流程的資訊架構，並
+            考量了易用性問題。在完成整理後，進入重新設計階段，過程
+            中花了些時間在美觀與實用之間找到平衡，特別是顏色選擇方
+            面。
           </p>
           <p className="mb-5 text-lg leading-8 max-sm:text-base max-sm:leading-7">
-            掌握以上三大關鍵後，希望讓你與無障礙的距離更近了一步。接下來，我們會從設計與研究的角度出發，讓你了解身為產品設計師或設計研究員，能夠做什麼事情來幫助實踐數位無障礙。
+          學員 B：針對無障礙需求，感覺整體視覺風格偏向較為生硬、
+            扁平，尤其在設計金融類型的流程時，會更注重操作的流暢
+            度，這樣一來美感就不太能以主流風格呈現。此外，由於顏色
+            必須符合對比度規範，花了不少時間進行調整，過程稍顯繁
+            瑣。不過幸好無障礙檢測工具提供了推薦配色，讓整個過程變
+            得簡單許多。
+          </p>
+          <p className="text-red-500 mb-5 text-lg leading-8 max-sm:text-base max-sm:leading-7">
+          Q：完成無障礙課程訓練後，你的設計思維、理念或執行
+            作法有沒有發生改變？為什麼？
           </p>
           <p className="mb-5 text-lg leading-8 max-sm:text-base max-sm:leading-7">
-            Let's do it!
+          學員 A：增加了許多無漲案的設計知識，並在實作的過程中會
+            提醒自己留意。另外，現在有許多免費的無障礙工具可以降低
+            執行無障礙設計的阻力。
           </p>
-          <footer className="mt-9 text-sm leading-6">
-            <p>
-              <span>封面圖片：</span>
-              <a  className="text-gray-900">Unsplash</a>
-            </p>
-          </footer>
+          <p className="mb-5 text-lg leading-8 max-sm:text-base max-sm:leading-7">
+          學員 B：在設計時，我會特別關注區域劃分以及顏色對比度對
+            視覺的影響。隨著對這些元素的敏感度提升，這些習慣不僅影
+            響我的作品，也讓我在觀察其他設計時，自然而然地開始分析
+            其結構和設計邏輯。
+          </p>
+          <p className="mb-5 text-lg leading-8 max-sm:text-base max-sm:leading-7">
+          學員 C：透過金融無障礙小隊的專案的 PB 小聚分享，我覺得
+            無障礙是個有趣的領域。上完本次的無障礙設計課程後，即使
+            客戶沒有明確要求無障礙標準，我在設計時仍會先考慮佈局、
+            用色和字級是否符合無障礙標準，感覺這些知識已經潛移默化
+            地影響了我的設計思維。
+          </p>
+          <p className="mb-5 text-lg leading-8 max-sm:text-base max-sm:leading-7">
+          Q：你對這次無障礙設計課程的內容或是實作練習，有什
+          麼改進的建議？
+          </p>
+          <p className="mb-5 text-lg leading-8 max-sm:text-base max-sm:leading-7">
+          學員 A：除了這類課程外，我希望無障礙設計能夠融入我們的
+            工作流程和設計思維中，而不僅僅是一次性的學習體驗。希望
+            從自身開始，將無障礙的理念影響到專案，並擴展到相關利害
+            關係人。期待未來在企業內部的每週設計例會中，能夠撥出時
+            間討論無障礙知識、實踐經驗以及全球的新趨勢和動態。
+          </p>
+          <p className="mb-5 text-lg leading-8 max-sm:text-base max-sm:leading-7">
+          學員 B：希望課程中能增加更多的小實作環節，因為這些小練
+          習能幫助我發現自己的盲點，同時對實踐和應用有很大幫助。
+          </p>
+          <p className="mb-5 text-lg leading-8 max-sm:text-base max-sm:leading-7">
+          學員 C：這次的實作練習以 App 為主，但在準確測量介面上
+            的元件大小、字級或色號時有些困難。相比之下，Web 頁面
+            可以使用一些開源工具來直接測量，這樣能減少主觀判斷。不
+            知道是否有推薦的作法？
+          </p>
+          <p className="font-bold mb-5 text-lg leading-8 max-sm:text-base max-sm:leading-7">
+          結論
+          </p>
+          <p className="mb-5 text-lg leading-8 max-sm:text-base max-sm:leading-7">
+          在本次無障礙設計課程中，學員們分享了他們的學習體驗與實作
+            挑戰，並提出了有價值的改進建議。學員們普遍認為課程中的內
+            容、提供的資源、小練習及課後實作練習，對於理解無障礙設計
+            概念非常有幫助，其中包括設計實作資源、顏色對比度分析器，
+            以及開源工具等，能夠在設計過程中更好地應對無障礙要求，並
+            提升了對無障礙設計的認知及思維。
+          </p>
+          <p className="mb-5 text-lg leading-8 max-sm:text-base max-sm:leading-7">
+          然而，在實作過程中，學員們也面臨了一些挑戰，像是如何把規
+            範落實到實作的過程中，知識的轉化及落地會需要著墨一番，尤
+            其無障礙設計方樣具有多樣性，哪種解決方案適用，使用者的真
+            實回饋對於選擇適合的解決方案至關重要，這突顯了使用者研究
+            在無障礙設計中的重要性。
+          </p>
+          <p className="mb-5 text-lg leading-8 max-sm:text-base max-sm:leading-7">
+          總體而言，本次課程有效協助遊石企業的設計師建立無障礙知
+          識、實踐能力，並促進了無障礙思維的養成。
+          </p>
+          
         </section>
       ),
     },
@@ -140,11 +172,11 @@ const ArticleK_3 = () => {
         {articleContent.map((section, index) => (
           <React.Fragment key={index}>
             {section.content}
-            </React.Fragment>
+          </React.Fragment>
         ))}
       </article>
     </>
   );
 };
 
-export default ArticleK_3;
+export default Workshop_article_1;
