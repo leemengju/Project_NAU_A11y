@@ -1,5 +1,10 @@
 import React from "react";
 import { ChevronLeft } from "lucide-react";
+import AveryLin from "../assets/avatar/Avery_lin.jpg";
+import ArrowRight, { ArrowRightWithStroke } from '../components/icons';
+import article_1 from '../assets/home/article_1.svg';
+import article_2 from '../assets/home/article_2.svg';
+import article_3 from '../assets/home/article_3.svg';
 
 const Informative_article_2 = () => {
   const articleContent = [
@@ -7,11 +12,11 @@ const Informative_article_2 = () => {
       type: "header",
       content: (
         <header className="mb-16">
-            <h4 onClick={() => window.location.href='/collection_knowledge'} className=" flex flex-row items-center gap-1 mb-1.5 text-xl font-medium tracking-wide text-stone-700 max-sm:text-md max-sm:leading-9 underline">
-           
-                <ChevronLeft />
-                回到文章彙總
-            </h4>
+          <h4 onClick={() => window.location.href = '/collection_knowledge'} className=" flex flex-row items-center gap-1 mb-1.5 text-xl font-medium tracking-wide text-stone-700 max-sm:text-md max-sm:leading-9 underline">
+
+            <ChevronLeft />
+            回到文章彙總
+          </h4>
           <h1 className="mb-1.5 text-3xl font-bold tracking-wide leading-10 text-stone-700 max-sm:text-2xl max-sm:leading-9">
             建立數位無障礙的三大思維
           </h1>
@@ -19,9 +24,18 @@ const Informative_article_2 = () => {
             1. 從同理心出發 2. 建構無障礙產品是「整個團隊」的事 3.
             學習無止盡，擁抱成長心態
           </p>
-          <time dateTime="2024-10-28" className="text-base leading-5 font-[350] text-stone-700">
-            2024-10-28
-          </time>
+          <div className="flex flex-row items-center gap-2">
+            <img src={AveryLin} alt="Avery Lin" className="w-10 h-10 border-2 border-red-700 rounded-full" />
+            <p className="text-base leading-5 font-[350] text-stone-700">
+              Avery Lin
+            </p>
+            <span className="text-base leading-5 font-[350] text-stone-700">
+              •
+            </span>
+            <time dateTime="2024-10-28" className="text-base leading-5 font-[350] text-stone-700">
+              2024-10-28
+            </time>
+          </div>
         </header>
       ),
     },
@@ -29,10 +43,23 @@ const Informative_article_2 = () => {
       type: "section",
       content: (
         <section className="px-0 py-5 bg-white rounded max-sm:p-4">
+          {/* 原文連結 */}
           <div className="mb-3.5">
             <p className="text-xs leading-5">
               <span>原文連結｜</span>
               <a href="https://medium.com/uxi-design/%E5%BB%BA%E7%AB%8B%E6%95%B8%E4%BD%8D%E7%84%A1%E9%9A%9C%E7%A4%99%E7%9A%84%E4%B8%89%E5%A4%A7%E6%80%9D%E7%B6%AD-9b34dc940b92" className="text-gray-900 " style={{ textDecoration: 'underline' }}>Medium 文章</a>
+            </p>
+          </div>
+          {/* 目錄導航 */}
+          <div className="mb-3.5">
+            <p className="text-xs leading-5">
+              <span>目錄導航｜</span>
+              <a href="#teamwork" className="text-gray-900 " style={{ textDecoration: 'underline' }}>建構無障礙產品是「整個團隊」的事</a>
+            </p>
+
+            <p className="text-xs leading-5">
+              <span style={{ color: "#FFFFFF" }}>目錄導航｜</span>
+              <a href="#conclusion" className="text-gray-900 " style={{ textDecoration: 'underline' }}>結語</a>
             </p>
           </div>
           <p className="mb-5 text-lg leading-8 max-sm:text-base max-sm:leading-7">
@@ -66,7 +93,7 @@ const Informative_article_2 = () => {
           <p className="mb-5 text-lg leading-8 max-sm:text-base max-sm:leading-7">
             在開始建立無障礙之前，如果你在心中保有三個關鍵思維，往後在實踐無障礙的路上會更順利。
           </p>
-          <h2 className="mx-0 mt-6 mb-2.5 text-lg font-bold leading-6 text-gray-900">
+          <h2 id="teamwork" className="mx-0 mt-6 mb-2.5 text-lg font-bold leading-6 text-gray-900">
             建構無障礙產品是「整個團隊」的事
           </h2>
           <figure className="mx-0 my-5 w-full">
@@ -93,7 +120,7 @@ const Informative_article_2 = () => {
           <p className="mb-5 text-lg leading-8 max-sm:text-base max-sm:leading-7">
             建構無障礙產品是各個職能一同協作、合作的過程，不單是前後端工程師，或是品質管理專家的職責。
           </p>
-          <h2 className="mx-0 mt-6 mb-2.5 text-lg font-bold leading-6 text-gray-900">
+          <h2 id="conclusion" className="mx-0 mt-6 mb-2.5 text-lg font-bold leading-6 text-gray-900">
             結語
           </h2>
           <blockquote className="pt-1 pr-0 pb-0 pl-4 mx-0 my-5 border-l border-solid border-l-[3px]">
@@ -126,7 +153,7 @@ const Informative_article_2 = () => {
           <footer className="mt-9 text-sm leading-6">
             <p>
               <span>封面圖片：</span>
-              <a  className="text-gray-900">Unsplash</a>
+              <a className="text-gray-900">Unsplash</a>
             </p>
           </footer>
         </section>
@@ -140,9 +167,94 @@ const Informative_article_2 = () => {
         {articleContent.map((section, index) => (
           <React.Fragment key={index}>
             {section.content}
-            </React.Fragment>
+          </React.Fragment>
         ))}
       </article>
+      {/* 推薦文章 */}
+      <div className="bg-[#F4F4F4] w-full flex flex-col justify-center items-center py-8 px-4 max-sm:px-0 max-sm:gap-8">
+        {/* knowledge_titleRow */}
+        <section className="flex justify-between items-center  w-[732px]  max-sm:w-[390px] max-sm:px-[32px] ">
+          <h2 className="text-xl leading-8 font-[350] text-stone-700 tracking-[3px]">
+            你可能會感興趣的文章
+          </h2>
+          <a href="/collection_knowledge" className="flex items-center cursor-pointer transform transition-transform duration-300 hover:scale-110" style={{ display: "none" }}>
+            <span className="pr-2.5 text-lg leading-7 text-stone-600 tracking-[2.4px]">
+              more
+            </span>
+            <ArrowRightWithStroke />
+          </a>
+        </section>
+
+        {/* knowledge_cardsRow */}
+        <section className=" flex flex-row gap-4 py-4 w-[732px] max-sm:flex-col max-sm:px-9 max-sm:justify-center max-sm:w-[390px] ">
+          <article onClick={() => window.location.href = "/informative_article_1"} className="card flex flex-col justify-center items-start bg-white rounded-2xl shadow-lg w-[234px] max-sm:w-[320px] transform transition-transform duration-300 hover:scale-105 cursor-pointer">
+            <figure className="w-full h-36 rounded-3xl max-sm:h-60">
+              <img
+                src={article_1}
+                alt=""
+                className="w-full h-full object-cover rounded-t-[15px] "
+              />
+            </figure>
+            <div className="flex flex-col justify-between px-5 pt-2.5 pb-0 h-[124px]">
+              <h3 className="pt-1 text-base font-bold tracking-wider leading-6 text-stone-700">
+                推開數位無障礙大門，輕鬆淺談數位無障礙規範
+              </h3>
+              <div className="pt-5 pb-7">
+                <a href="#" className="flex items-center justify-end">
+                  <span className="mr-1.5 text-base tracking-wider leading-5 font-[350] text-neutral-500">
+                    繼續閱讀
+                  </span>
+                  <ArrowRight />
+                </a>
+              </div>
+            </div>
+          </article>
+          <article onClick={() => window.location.href = "/informative_article_2"} className="card flex flex-col justify-center items-start bg-white rounded-2xl shadow-lg w-[234px] max-sm:w-[320px] transform transition-transform duration-300 hover:scale-105 cursor-pointer">
+            <figure className="w-full h-36 rounded-3xl max-sm:h-60">
+              <img
+                src={article_2}
+                alt=""
+                className="w-full h-full object-cover rounded-t-[15px] "
+              />
+            </figure>
+            <div className="flex flex-col justify-between px-5 pt-2.5 pb-0 h-[124px]">
+              <h3 className="pt-1 text-base font-bold tracking-wider leading-6 text-stone-700">
+                如何建立數位無障礙的三大思維觀念?
+              </h3>
+              <div className="pt-5 pb-7">
+                <a href="#" className="flex items-center justify-end">
+                  <span className="mr-1.5 text-base tracking-wider leading-5 font-[350] text-neutral-500">
+                    繼續閱讀
+                  </span>
+                  <ArrowRight />
+                </a>
+              </div>
+            </div>
+          </article>
+          <article onClick={() => window.location.href = "/informative_article_3"} className="card flex flex-col justify-center items-start bg-white rounded-2xl shadow-lg w-[234px] max-sm:w-[320px] transform transition-transform duration-300 hover:scale-105 cursor-pointer">
+            <figure className="w-full h-36 rounded-3xl max-sm:h-60">
+              <img
+                src={article_3}
+                alt=""
+                className="w-full h-full object-cover rounded-t-[15px] "
+              />
+            </figure>
+            <div className="flex flex-col justify-between px-5 pt-2.5 pb-0 h-[124px]">
+              <h3 className="pt-1 text-base font-bold tracking-wider leading-6 text-stone-700">
+                無障礙案例分享：電動遊戲如何無障礙?
+              </h3>
+              <div className="pt-5 pb-7">
+                <a href="#" className="flex items-center justify-end">
+                  <span className="mr-1.5 text-base tracking-wider leading-5 font-[350] text-neutral-500">
+                    繼續閱讀
+                  </span>
+                  <ArrowRight />
+                </a>
+              </div>
+            </div>
+          </article>
+        </section>
+      </div>
     </>
   );
 };

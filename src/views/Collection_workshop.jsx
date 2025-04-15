@@ -2,6 +2,7 @@
 import ArrowRight from '../components/icons'
 import article_4 from '../assets/home/article_4.svg'
 import article_5 from '../assets/home/article_5.svg'
+import AveryLin from "../assets/avatar/Avery_lin.jpg"
 
 
 const Collection_workshop = () => {
@@ -31,12 +32,28 @@ const Collection_workshop = () => {
                 className="w-full h-full object-cover rounded-[15px]  max-sm:rounded-t-[15px] "
               />
             </figure>
-            {/* 卡片文字內容 */}
-            <div className="flex flex-col gap-4 px-5 pt-2.5 pb-0 h-[124px] max-sm:gap-0">
+             {/* 卡片文字內容 */}
+             <div className="flex flex-col gap-3 px-5 pt-2.5 pb-1 h-fill max-sm:gap-1">
               <h3 className="pt-1 text-[20px]  font-bold tracking-wider leading-6 text-stone-700 max-sm:text-[16px]">
               數位無障礙設計：遊石設計企業內訓
               </h3>
-              <div className="max-sm:pt-5 pb-3">
+               {/* 作者與日期*/}
+               <div className="flex flex-row items-center gap-2 max-sm:mt-2">
+                <img src={AveryLin} alt="Avery Lin" className="w-10 h-10 border-2 border-red-700 rounded-full" />
+                <div className="flex flex-row items-center gap-2 max-sm:flex-col max-sm:items-start max-sm:gap-0">
+                  <p className="text-base leading-5 font-[350] text-stone-700 max-sm:text-sm">
+                    Avery Lin
+                  </p>
+    
+                <span className="text-base leading-5 font-[350] text-stone-700 max-sm:hidden">
+                  •
+                </span>
+                <time dateTime=" 2024-11-20" className="text-base leading-5 font-[350] text-stone-700 max-sm:text-sm max-sm:text-stone-500">
+                2024-11-20
+                </time>
+                </div>
+              </div>
+              <div className=" pb-3">
                 <a href="#" className="flex items-center justify-end">
                   <span className="mr-1.5 text-base tracking-wider leading-5 font-[350] text-neutral-500">
                     繼續閱讀
@@ -56,10 +73,26 @@ const Collection_workshop = () => {
               />
             </figure>
             {/* 卡片文字內容 */}
-            <div className="flex flex-col gap-4 px-5 pt-2.5 pb-0 h-[124px] max-sm:gap-0">
+            <div className="flex flex-col gap-3 px-5 pt-2.5 pb-1 h-fill max-sm:gap-1">
               <h3 className="pt-1 text-[20px]  font-bold tracking-wider leading-6 text-stone-700 max-sm:text-[16px]">
               體驗工作坊分享文：包容不卡卡桌遊
               </h3>
+               {/* 作者與日期*/}
+               <div className="flex flex-row items-center gap-2 max-sm:mt-2">
+                <img src={AveryLin} alt="Avery Lin" className="w-10 h-10 border-2 border-red-700 rounded-full" />
+                <div className="flex flex-row items-center gap-2 max-sm:flex-col max-sm:items-start max-sm:gap-0">
+                  <p className="text-base leading-5 font-[350] text-stone-700 max-sm:text-sm">
+                    Avery Lin
+                  </p>
+    
+                <span className="text-base leading-5 font-[350] text-stone-700 max-sm:hidden">
+                  •
+                </span>
+                <time dateTime=" 2024-11-20" className="text-base leading-5 font-[350] text-stone-700 max-sm:text-sm max-sm:text-stone-500">
+                  2024-11-20
+                </time>
+                </div>
+              </div>
               <div className="max-sm:pt-5 pb-3">
                 <a href="#" className="flex items-center justify-end">
                   <span className="mr-1.5 text-base tracking-wider leading-5 font-[350] text-neutral-500">

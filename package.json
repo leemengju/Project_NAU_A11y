@@ -1,7 +1,6 @@
 {
   "name": "Project_NAU_A11y",
-  "homepage": "https://leemengju.github.io/Project_NAU_A11y/",
-  "private": true,
+  "private": false,
   "version": "0.0.0",
   "type": "module",
   "scripts": {

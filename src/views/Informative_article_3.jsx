@@ -1,6 +1,7 @@
 import React from "react";
 import { ChevronLeft } from "lucide-react";
 import { Ellipsis } from "lucide-react";
+import Laurence from "../assets/avatar/Laurence.png"
 import p1 from "../assets/informative_article_3/p1.svg";
 import p2 from "../assets/informative_article_3/p2.svg";
 import p3 from "../assets/informative_article_3/p3.svg";
@@ -10,6 +11,10 @@ import p6 from "../assets/informative_article_3/p6.svg";
 import p7 from "../assets/informative_article_3/p7.svg";
 import p8 from "../assets/informative_article_3/p8.svg";
 import p9 from "../assets/informative_article_3/p9.svg";
+import ArrowRight, { ArrowRightWithStroke } from '../components/icons';
+import article_1 from '../assets/home/article_1.svg';
+import article_2 from '../assets/home/article_2.svg';
+import article_3 from '../assets/home/article_3.svg';
 
 const Informative_article_3 = () => {
   const articleContent = [
@@ -28,9 +33,18 @@ const Informative_article_3 = () => {
           <p className="mb-6 text-base tracking-wider leading-6 font-[350] text-stone-600 max-sm:text-sm max-sm:leading-5">
           身心障礙玩家如何一起加入遊戲世界？
           </p>
+          <div className="flex flex-row items-center gap-2">
+          <img src={Laurence} alt="Laurence" className="w-10 h-10 border-2 border-red-700 rounded-full" />
+          <p  className="text-base leading-5 font-[350] text-stone-700">
+            Laurence
+          </p>
+          <span className="text-base leading-5 font-[350] text-stone-700">
+            •
+          </span>
           <time dateTime="2024-10-28" className="text-base leading-5 font-[350] text-stone-700">
             2024-10-28
           </time>
+          </div>
         </header>
       ),
     },
@@ -38,18 +52,34 @@ const Informative_article_3 = () => {
       type: "section",
       content: (
         <section className="px-0 py-5 bg-white rounded max-sm:p-4">
-          <div className="mb-3.5">
+          {/* 原文連結 */}
+          <div className="mb-2">
             <p className="text-xs leading-5">
               <span>原文連結｜</span>
               <a href="https://medium.com/uxi-design/%E9%9B%BB%E7%8E%A9%E9%81%8A%E6%88%B2%E7%84%A1%E9%9A%9C%E7%A4%99-%E8%BA%AB%E5%BF%83%E9%9A%9C%E7%A4%99%E7%8E%A9%E5%AE%B6%E5%A6%82%E4%BD%95%E4%B8%80%E8%B5%B7%E5%8A%A0%E5%85%A5%E9%81%8A%E6%88%B2%E4%B8%96%E7%95%8C-faba7e228c96" className="text-gray-900 " style={{ textDecoration: 'underline' }}>Medium 文章</a>
             </p>
           </div>
+          {/* 目錄導航 */}
+          <div className="mb-3.5">
+            <p className="text-xs leading-5">
+              <span>目錄導航｜</span>
+              <a href="#accessibility-controller" className="text-gray-900 " style={{ textDecoration: 'underline' }}>無障礙控制器</a>
+            </p>
+            <p className="text-xs leading-5">
+              <span style={{color: "#FFFFFF"}}>目錄導航｜</span>
+              <a href="#accessibility-software" className="text-gray-900 " style={{ textDecoration: 'underline' }}>無障礙軟體功能</a>
+            </p>
+            <p className="text-xs leading-5">
+              <span style={{color: "#FFFFFF"}}>目錄導航｜</span>
+              <a href="#conclusion" className="text-gray-900 " style={{ textDecoration: 'underline' }}>結語</a>
+            </p>
+          </div>
           <p className="mb-5 text-lg leading-8 max-sm:text-base max-sm:leading-7">
           你喜歡玩電動遊戲嗎？你可以想像有行動障礙的人要如何玩遊戲嗎？為了讓每個人都可以享受遊戲，遊戲平台和開發商也正在積極推動無障礙設計。這篇文章會介紹現在市面上的遊戲廠商如何透過設計來幫助身心障礙人士更好享受遊戲！
           </p>
-          <p className="font-bold mb-5 text-xl leading-8 max-sm:text-base max-sm:leading-7">
+          <h2 id="accessibility-controller" className=" font-bold mb-5 text-xl leading-8 max-sm:text-base max-sm:leading-7">
           無障礙控制器
-          </p>
+          </h2>
           <p className="mb-5 text-lg leading-8 max-sm:text-base max-sm:leading-7">
           遊戲的無障礙硬體設計，通常是為了讓人能更容易或用更多元的方式操控遊戲。一般的遊戲控制器的使用方式通常需要雙手都可以穩定地維持一個抓握的姿勢，而且搖桿也需要精細的手指操作，這對手部控制能力比較不好的人來說，是很難達成的條件。
           </p>
@@ -203,9 +233,9 @@ const Informative_article_3 = () => {
 
 
 
-          <p className="font-bold mb-5 text-xl leading-8 max-sm:text-base max-sm:leading-7">
+          <h2 id="accessibility-software" className="font-bold mb-5 text-xl leading-8 max-sm:text-base max-sm:leading-7">
           無障礙軟體功能
-          </p>
+          </h2>
           <p className="mb-5 text-lg leading-8 max-sm:text-base max-sm:leading-7">
           硬體的創新需要軟體的配合才能發揮最大效用。這個章節我們會介紹遊戲平台提供了哪些軟體上的無障礙設定，以及他們分別協助了哪些面向。
           </p>
@@ -235,9 +265,9 @@ const Informative_article_3 = () => {
           </p>
 
 
-          <p className="font-bold mb-5 text-xl leading-8 max-sm:text-base max-sm:leading-7">
+          <h2 id="conclusion" className="font-bold mb-5 text-xl leading-8 max-sm:text-base max-sm:leading-7">
           結語
-          </p>
+          </h2>
           <p className="mb-5 text-lg leading-8 max-sm:text-base max-sm:leading-7">
           Xbox、PlayStation 和 任天堂 Switch 都在推動遊戲無障礙，通過硬體創新、軟體改良和遊戲設計的改進，每個平台都有其獨特的方法和優勢。任天堂 Switch 雖然沒有專門的硬體，但其軟體設定還是有提供一定的靈活度，也鼓勵遊戲製作方提供遊戲內的無障礙設計。這些平台正在逐步消除障礙，讓更多玩家能夠享受遊戲的樂趣。大家可以期待看到更多創新的無障礙解決方案，以及一個更加開放和包容的遊戲文化！
           </p>
@@ -261,6 +291,91 @@ const Informative_article_3 = () => {
             </React.Fragment>
         ))}
       </article>
+       {/* 推薦文章 */}
+       <div className="bg-[#F4F4F4] w-full flex flex-col justify-center items-center py-8 px-4 max-sm:px-0 max-sm:gap-8">
+        {/* knowledge_titleRow */}
+        <section className="flex justify-between items-center  w-[732px]  max-sm:w-[390px] max-sm:px-[32px] ">
+          <h2 className="text-xl leading-8 font-[350] text-stone-700 tracking-[3px]">
+            你可能會感興趣的文章
+          </h2>
+          <a href="/collection_knowledge" className="flex items-center cursor-pointer transform transition-transform duration-300 hover:scale-110" style={{ display: "none" }}>
+            <span className="pr-2.5 text-lg leading-7 text-stone-600 tracking-[2.4px]">
+              more
+            </span>
+            <ArrowRightWithStroke />
+          </a>
+        </section>
+
+        {/* knowledge_cardsRow */}
+        <section className=" flex flex-row gap-4 py-4 w-[732px] max-sm:flex-col max-sm:px-9 max-sm:justify-center max-sm:w-[390px] ">
+          <article onClick={() => window.location.href = "/informative_article_1"} className="card flex flex-col justify-center items-start bg-white rounded-2xl shadow-lg w-[234px] max-sm:w-[320px] transform transition-transform duration-300 hover:scale-105 cursor-pointer">
+            <figure className="w-full h-36 rounded-3xl max-sm:h-60">
+              <img
+                src={article_1}
+                alt=""
+                className="w-full h-full object-cover rounded-t-[15px] "
+              />
+            </figure>
+            <div className="flex flex-col justify-between px-5 pt-2.5 pb-0 h-[124px]">
+              <h3 className="pt-1 text-base font-bold tracking-wider leading-6 text-stone-700">
+                推開數位無障礙大門，輕鬆淺談數位無障礙規範
+              </h3>
+              <div className="pt-5 pb-7">
+                <a href="#" className="flex items-center justify-end">
+                  <span className="mr-1.5 text-base tracking-wider leading-5 font-[350] text-neutral-500">
+                    繼續閱讀
+                  </span>
+                  <ArrowRight />
+                </a>
+              </div>
+            </div>
+          </article>
+          <article onClick={() => window.location.href = "/informative_article_2"} className="card flex flex-col justify-center items-start bg-white rounded-2xl shadow-lg w-[234px] max-sm:w-[320px] transform transition-transform duration-300 hover:scale-105 cursor-pointer">
+            <figure className="w-full h-36 rounded-3xl max-sm:h-60">
+              <img
+                src={article_2}
+                alt=""
+                className="w-full h-full object-cover rounded-t-[15px] "
+              />
+            </figure>
+            <div className="flex flex-col justify-between px-5 pt-2.5 pb-0 h-[124px]">
+              <h3 className="pt-1 text-base font-bold tracking-wider leading-6 text-stone-700">
+                如何建立數位無障礙的三大思維觀念?
+              </h3>
+              <div className="pt-5 pb-7">
+                <a href="#" className="flex items-center justify-end">
+                  <span className="mr-1.5 text-base tracking-wider leading-5 font-[350] text-neutral-500">
+                    繼續閱讀
+                  </span>
+                  <ArrowRight />
+                </a>
+              </div>
+            </div>
+          </article>
+          <article onClick={() => window.location.href = "/informative_article_3"} className="card flex flex-col justify-center items-start bg-white rounded-2xl shadow-lg w-[234px] max-sm:w-[320px] transform transition-transform duration-300 hover:scale-105 cursor-pointer">
+            <figure className="w-full h-36 rounded-3xl max-sm:h-60">
+              <img
+                src={article_3}
+                alt=""
+                className="w-full h-full object-cover rounded-t-[15px] "
+              />
+            </figure>
+            <div className="flex flex-col justify-between px-5 pt-2.5 pb-0 h-[124px]">
+              <h3 className="pt-1 text-base font-bold tracking-wider leading-6 text-stone-700">
+                無障礙案例分享：電動遊戲如何無障礙?
+              </h3>
+              <div className="pt-5 pb-7">
+                <a href="#" className="flex items-center justify-end">
+                  <span className="mr-1.5 text-base tracking-wider leading-5 font-[350] text-neutral-500">
+                    繼續閱讀
+                  </span>
+                  <ArrowRight />
+                </a>
+              </div>
+            </div>
+          </article>
+        </section>
+      </div>
     </>
   );
 };

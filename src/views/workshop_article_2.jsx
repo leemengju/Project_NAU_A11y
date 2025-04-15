@@ -1,7 +1,11 @@
 import React from "react";
 import { ChevronLeft } from "lucide-react";
+import AveryLin from "../assets/avatar/Avery_lin.jpg"
 import p1 from "../assets/workshop_article_2/p1.svg";
 import p2 from "../assets/workshop_article_2/p2.svg";
+import ArrowRight, { ArrowRightWithStroke } from '../components/icons';
+import article_4 from '../assets/home/article_4.svg';
+import article_5 from '../assets/home/article_5.svg';
 
 const Workshop_article_2 = () => {
   const articleContent = [
@@ -18,9 +22,18 @@ const Workshop_article_2 = () => {
             體驗工作坊分享文：包容不卡卡
           </h1>
 
-          <time dateTime="2024-11-20" className="text-base leading-5 font-[350] text-stone-700">
+          <div className="flex flex-row items-center gap-2">
+          <img src={AveryLin} alt="Avery Lin" className="w-10 h-10 border-2 border-red-700 rounded-full" />
+          <p  className="text-base leading-5 font-[350] text-stone-700">
+            Avery Lin
+          </p>
+          <span className="text-base leading-5 font-[350] text-stone-700">
+            •
+          </span>
+          <time dateTime="2024-10-28" className="text-base leading-5 font-[350] text-stone-700">
             2024-11-20
           </time>
+          </div>
         </header>
       ),
     },
@@ -138,6 +151,69 @@ const Workshop_article_2 = () => {
           </React.Fragment>
         ))}
       </article>
+        {/* 推薦文章 */}
+        <div className="bg-[#F4F4F4] w-full py-4 flex flex-col justify-center items-center py-8 px-4 max-sm:px-0 max-sm:gap-8">
+          {/* workshop_titleRow */}
+          <section className="flex justify-between items-center  w-[732px]  max-sm:w-[390px] max-sm:px-[32px] ">
+            <h2 className="text-xl leading-8 font-[350] text-stone-700 tracking-[3px]">
+              你可能會感興趣的文章
+            </h2>
+            <a href="/collection_workshop" style={{display: "none"}} className="flex items-center cursor-pointer transform transition-transform duration-300 hover:scale-110">
+              <span className="pr-2.5 text-lg leading-7 text-stone-600 tracking-[2.4px]">
+                more
+              </span>
+              <ArrowRightWithStroke />
+            </a>
+          </section>
+
+          {/* workshop_cardsRow */}
+          <section className=" flex flex-row gap-4 py-4 w-[732px] max-sm:flex-col max-sm:px-9 max-sm:justify-center max-sm:w-[390px] ">
+            <article onClick={() => window.location.href = "/workshop_article_1"} className="card flex flex-col justify-center items-start bg-white rounded-2xl shadow-lg w-[234px] max-sm:w-[320px]  transform transition-transform duration-300 hover:scale-105 cursor-pointer">
+              <figure className="w-full h-36 rounded-3xl max-sm:h-60">
+                <img
+                  src={article_4}
+                  alt=""
+                  className="w-full h-full object-cover rounded-t-[15px] "
+                />
+              </figure>
+              <div className="flex flex-col justify-between px-5 pt-2.5 pb-0 h-[124px]">
+                <h3 className="pt-1 text-base font-bold tracking-wider leading-6 text-stone-700">
+                  數位無障礙設計：遊石設計企業內訓
+                </h3>
+                <div className="pt-5 pb-7">
+                  <a href="#" className="flex items-center justify-end">
+                    <span className="mr-1.5 text-base tracking-wider leading-5 font-[350] text-neutral-500">
+                      繼續閱讀
+                    </span>
+                    <ArrowRight />
+                  </a>
+                </div>
+              </div>
+            </article>
+            <article onClick={() => window.location.href = "/workshop_article_2"} className=" card flex flex-col justify-center items-start bg-white rounded-2xl shadow-lg w-[234px] max-sm:w-[320px] transform transition-transform duration-300 hover:scale-105 cursor-pointer">
+              <figure className="w-full h-36 rounded-3xl max-sm:h-60">
+                <img
+                  src={article_5}
+                  alt=""
+                  className="w-full h-full object-cover rounded-t-[15px] "
+                />
+              </figure>
+              <div className="flex flex-col justify-between px-5 pt-2.5 pb-0 h-[124px]">
+                <h3 className="pt-1 text-base font-bold tracking-wider leading-6 text-stone-700">
+                  體驗工作坊分享文：包容不卡卡桌遊
+                </h3>
+                <div className="pt-5 pb-7">
+                  <a href="#" className="flex items-center justify-end">
+                    <span className="mr-1.5 text-base tracking-wider leading-5 font-[350] text-neutral-500">
+                      繼續閱讀
+                    </span>
+                    <ArrowRight />
+                  </a>
+                </div>
+              </div>
+            </article>
+          </section>
+          </div >
     </>
   );
 };
