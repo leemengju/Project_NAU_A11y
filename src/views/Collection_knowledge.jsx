@@ -52,6 +52,7 @@ const Collection_knowledge = () => {
       image: informative_article_4_img,
       link: "/informative_article_4"
     }
+  
   ];
 
   // 过滤文章

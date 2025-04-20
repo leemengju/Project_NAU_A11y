@@ -17,7 +17,7 @@ import {
   Menu
 } from "lucide-react";
 import { useState } from "react";
-
+import SubscribeForm from '../components/SubscribeForm';
 const Home = () => {
   // 側邊選單
   const [isOpen, setIsOpen] = useState(false);
@@ -423,8 +423,10 @@ const Home = () => {
     <img src={toolkits} alt="toolkits" className="w-full h-full object-cover rounded-t-[15px] " />
         </div >
       </section >
-
-
+{/* subscribe */}
+{/* <section id="subscribe" className="subscribe flex flex-col items-center w-full bg-[#F4F4F4]">
+  <SubscribeForm />
+</section> */}
     </>
   );
 };
