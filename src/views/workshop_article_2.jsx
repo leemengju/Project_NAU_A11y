@@ -4,8 +4,30 @@ import AveryLin from "../assets/avatar/Avery_lin.jpg"
 import p1 from "../assets/workshop_article_2/p1.svg";
 import p2 from "../assets/workshop_article_2/p2.svg";
 import ArrowRight, { ArrowRightWithStroke } from '../components/icons';
-import article_4 from '../assets/home/article_4.svg';
-import article_5 from '../assets/home/article_5.svg';
+import workshop_article_1_img from '../assets/home/workshop_article_1.svg';
+import workshop_article_2_img from '../assets/home/workshop_article_2.svg';
+import ShareButton from '../components/ShareButton';
+
+const articles = [
+  {
+    id: 1,
+    title: "數位無障礙設計：遊石設計企業內訓",
+    author: "Avery Lin",
+    authorImg: AveryLin,
+    date: "2024-11-20",
+    image: workshop_article_1_img,
+    link: "/workshop_article_1"
+  },
+  {
+    id: 2,
+    title: "無障礙設計工作坊：台灣設計研究院",
+    author: "Avery Lin",
+    authorImg: AveryLin,
+    date: "2024-11-15",
+    image: workshop_article_2_img,
+    link: "/workshop_article_2"
+  },
+]
 
 const Workshop_article_2 = () => {
   const articleContent = [
@@ -13,11 +35,17 @@ const Workshop_article_2 = () => {
       type: "header",
       content: (
         <header className="mb-16">
-          <h4 onClick={() => window.location.href = '/collection_workshop'} className=" flex flex-row items-center gap-1 mb-1.5 text-xl font-medium tracking-wide text-stone-700 max-sm:text-md max-sm:leading-9 underline">
+           {/* title_row */}
+           <div className="flex flex-row justify-between items-center mb-1.5">
+            <h4 onClick={() => window.location.href = '/collection_workshop'} className=" flex flex-row items-center gap-1  text-xl font-medium tracking-wide text-stone-700 max-sm:text-md max-sm:leading-9 underline">
 
-            <ChevronLeft />
-            回到文章彙總
-          </h4>
+              <ChevronLeft />
+              回到文章彙總
+            </h4>
+            {/* 分享按鈕 */}
+            <ShareButton article={articles[1]} />
+
+          </div>
           <h1 className="mb-1.5 text-3xl font-bold tracking-wide leading-10 text-stone-700 max-sm:text-2xl max-sm:leading-9">
             體驗工作坊分享文：包容不卡卡
           </h1>
@@ -171,7 +199,7 @@ const Workshop_article_2 = () => {
             <article onClick={() => window.location.href = "/workshop_article_1"} className="card flex flex-col justify-center items-start bg-white rounded-2xl shadow-lg w-[234px] max-sm:w-[320px]  transform transition-transform duration-300 hover:scale-105 cursor-pointer">
               <figure className="w-full h-36 rounded-3xl max-sm:h-60">
                 <img
-                  src={article_4}
+                  src={workshop_article_1_img}
                   alt=""
                   className="w-full h-full object-cover rounded-t-[15px] "
                 />
@@ -193,7 +221,7 @@ const Workshop_article_2 = () => {
             <article onClick={() => window.location.href = "/workshop_article_2"} className=" card flex flex-col justify-center items-start bg-white rounded-2xl shadow-lg w-[234px] max-sm:w-[320px] transform transition-transform duration-300 hover:scale-105 cursor-pointer">
               <figure className="w-full h-36 rounded-3xl max-sm:h-60">
                 <img
-                  src={article_5}
+                  src={workshop_article_2_img}
                   alt=""
                   className="w-full h-full object-cover rounded-t-[15px] "
                 />

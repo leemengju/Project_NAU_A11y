@@ -1,7 +1,7 @@
 
 import ArrowRight from '../components/icons'
-import article_4 from '../assets/home/article_4.svg'
-import article_5 from '../assets/home/article_5.svg'
+import workshop_article_1_img from '../assets/home/workshop_article_1.svg'
+import workshop_article_2_img from '../assets/home/workshop_article_2.svg'
 import AveryLin from "../assets/avatar/Avery_lin.jpg"
 import { useState } from 'react';
 import { Search } from 'lucide-react';
@@ -21,7 +21,7 @@ const articles = [
     author: "Avery Lin",
     authorImg: AveryLin,
     date: "2024-11-20",
-    image: article_4,
+    image: workshop_article_1_img,
     link: "/workshop_article_1"
   },
   {
@@ -30,10 +30,11 @@ const articles = [
     author: "Avery Lin",
     authorImg: AveryLin,
     date: "2024-11-15",
-    image: article_5,
+    image: workshop_article_2_img,
     link: "/workshop_article_2"
   },
 ]
+
 
 // 過濾文章
 const  filteredArticles= articles.filter(article=>

@@ -1,7 +1,8 @@
 import React from "react";
 import { ChevronLeft } from "lucide-react";
 import { Ellipsis } from "lucide-react";
-import Laurence from "../assets/avatar/Laurence.png"
+import { Helmet } from "react-helmet";
+
 import p1 from "../assets/informative_article_3/p1.svg";
 import p2 from "../assets/informative_article_3/p2.svg";
 import p3 from "../assets/informative_article_3/p3.svg";
@@ -12,9 +13,56 @@ import p7 from "../assets/informative_article_3/p7.svg";
 import p8 from "../assets/informative_article_3/p8.svg";
 import p9 from "../assets/informative_article_3/p9.svg";
 import ArrowRight, { ArrowRightWithStroke } from '../components/icons';
-import article_1 from '../assets/home/article_1.svg';
-import article_2 from '../assets/home/article_2.svg';
-import article_3 from '../assets/home/article_3.svg';
+
+import ShareButton from '../components/ShareButton';
+import informative_article_1_img from '../assets/home/informative_article_1.svg'
+import informative_article_2_img from '../assets/home/informative_article_2.svg'
+import informative_article_3_img from '../assets/home/informative_article_3.svg'
+import informative_article_4_img from '../assets/home/informative_article_4.svg'
+import AveryLin from "../assets/avatar/Avery_lin.jpg"
+import Laurence from "../assets/avatar/Laurence.png"
+
+  
+  // 文章数据
+  const articles = [
+    {
+      id: 1,
+      title: "推開數位無障礙大門，輕鬆淺談數位無障礙規範",
+      author: "Avery Lin",
+      authorImg: AveryLin,
+      date: "2024-10-28",
+      image: informative_article_1_img,
+      link: "/informative_article_1"
+    },
+    {
+      id: 2,
+      title: "如何建立數位無障礙的三大思維觀念?",
+      author: "Avery Lin",
+      authorImg: AveryLin,
+      date: "2024-10-28",
+      image: informative_article_2_img,
+      link: "/informative_article_2"
+    },
+    {
+      id: 3,
+      title: "無障礙案例分享：電動遊戲如何無障礙?",
+      author: "Laurence",
+      authorImg: Laurence,
+      date: "2024-10-28",
+      image: informative_article_3_img,
+      link: "/informative_article_3"
+    },
+    {
+      id: 4,
+      title: "包容性設計工具箱：助你一臂之力！",
+      author: "Avery Lin",
+      authorImg: AveryLin,
+      date: "2025-02-21",
+      image: informative_article_4_img,
+      link: "/informative_article_4"
+    }
+  ];
+
 
 const Informative_article_3 = () => {
   const articleContent = [
@@ -22,13 +70,19 @@ const Informative_article_3 = () => {
       type: "header",
       content: (
         <header className="mb-16">
-            <h4 onClick={() => window.location.href='/collection_knowledge'} className=" flex flex-row items-center gap-1 mb-1.5 text-xl font-medium tracking-wide text-stone-700 max-sm:text-md max-sm:leading-9 underline">
-           
-                <ChevronLeft />
-                回到文章彙總
+           {/* title_row */}
+           <div className="flex flex-row justify-between items-center mb-1.5">
+            <h4 onClick={() => window.location.href = '/collection_knowledge'} className=" flex flex-row items-center gap-1  text-xl font-medium tracking-wide text-stone-700 max-sm:text-md max-sm:leading-9 underline">
+
+              <ChevronLeft />
+              回到文章彙總
             </h4>
+            {/* 分享按鈕 */}
+            <ShareButton article={articles[2]} />
+           
+          </div>
           <h1 className="mb-1.5 text-3xl font-bold tracking-wide leading-10 text-stone-700 max-sm:text-2xl max-sm:leading-9">
-          無障礙案例分享：電動遊戲
+          無障礙案例分享：電動遊戲如何無障礙?
           </h1>
           <p className="mb-6 text-base tracking-wider leading-6 font-[350] text-stone-600 max-sm:text-sm max-sm:leading-5">
           身心障礙玩家如何一起加入遊戲世界？
@@ -284,6 +338,14 @@ const Informative_article_3 = () => {
 
   return (
     <>
+      <Helmet>
+        <title>{articles[2].title}</title>
+        <meta property="og:title" content={articles[2].title} />
+        <meta property="og:description" content="身心障礙玩家如何一起加入遊戲世界？" />
+        <meta property="og:url" content={window.location.origin + articles[2].link} />
+        <meta property="og:type" content="article" />
+        <meta property="og:image" content={articles[2].image} />
+      </Helmet>
       <article className="mx-auto mt-30 mb-20 text-gray-700 max-w-[510px] max-md:px-5 max-md:py-0">
         {articleContent.map((section, index) => (
           <React.Fragment key={index}>
@@ -311,7 +373,7 @@ const Informative_article_3 = () => {
           <article onClick={() => window.location.href = "/informative_article_1"} className="card flex flex-col justify-center items-start bg-white rounded-2xl shadow-lg w-[234px] max-sm:w-[320px] transform transition-transform duration-300 hover:scale-105 cursor-pointer">
             <figure className="w-full h-36 rounded-3xl max-sm:h-60">
               <img
-                src={article_1}
+                src={informative_article_1_img}
                 alt=""
                 className="w-full h-full object-cover rounded-t-[15px] "
               />
@@ -333,7 +395,7 @@ const Informative_article_3 = () => {
           <article onClick={() => window.location.href = "/informative_article_2"} className="card flex flex-col justify-center items-start bg-white rounded-2xl shadow-lg w-[234px] max-sm:w-[320px] transform transition-transform duration-300 hover:scale-105 cursor-pointer">
             <figure className="w-full h-36 rounded-3xl max-sm:h-60">
               <img
-                src={article_2}
+                src={informative_article_2_img}
                 alt=""
                 className="w-full h-full object-cover rounded-t-[15px] "
               />
@@ -355,7 +417,7 @@ const Informative_article_3 = () => {
           <article onClick={() => window.location.href = "/informative_article_3"} className="card flex flex-col justify-center items-start bg-white rounded-2xl shadow-lg w-[234px] max-sm:w-[320px] transform transition-transform duration-300 hover:scale-105 cursor-pointer">
             <figure className="w-full h-36 rounded-3xl max-sm:h-60">
               <img
-                src={article_3}
+                src={informative_article_3_img}
                 alt=""
                 className="w-full h-full object-cover rounded-t-[15px] "
               />

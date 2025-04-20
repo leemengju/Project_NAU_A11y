@@ -5,11 +5,12 @@ import banner from '../assets/home/banner.svg';
 import toolkits from '../assets/home/toolkits.svg';
 import ArrowRight, { ArrowRightWithStroke } from '../components/icons';
 import workshop_pics from '../assets/home/workshop_main.svg';
-import article_1 from '../assets/home/article_1.svg';
-import article_2 from '../assets/home/article_2.svg';
-import article_3 from '../assets/home/article_3.svg';
-import article_4 from '../assets/home/article_4.svg';
-import article_5 from '../assets/home/article_5.svg';
+import informative_article_1_img from '../assets/home/informative_article_1.svg';
+import informative_article_2_img from '../assets/home/informative_article_2.svg';
+import informative_article_3_img from '../assets/home/informative_article_3.svg';
+import informative_article_4_img from '../assets/home/informative_article_4.svg';
+import workshop_article_1_img from '../assets/home/workshop_article_1.svg';
+import workshop_article_2_img from '../assets/home/workshop_article_2.svg';
 import { Button } from "@/components/ui/button";
 import logo from '../assets/layout/LOGO_L.svg';
 import {
@@ -197,7 +198,7 @@ const Home = () => {
           <article onClick={() => window.location.href = "/informative_article_1"} className="card flex flex-col justify-center items-start bg-white rounded-2xl shadow-lg w-[234px] max-sm:w-[320px] transform transition-transform duration-300 hover:scale-105 cursor-pointer">
             <figure className="w-full h-36 rounded-3xl max-sm:h-60">
               <img
-                src={article_1}
+                src={informative_article_1_img}
                 alt=""
                 className="w-full h-full object-cover rounded-t-[15px] "
               />
@@ -219,7 +220,7 @@ const Home = () => {
           <article onClick={() => window.location.href = "/informative_article_2"} className="card flex flex-col justify-center items-start bg-white rounded-2xl shadow-lg w-[234px] max-sm:w-[320px] transform transition-transform duration-300 hover:scale-105 cursor-pointer">
             <figure className="w-full h-36 rounded-3xl max-sm:h-60">
               <img
-                src={article_2}
+                src={ informative_article_2_img}
                 alt=""
                 className="w-full h-full object-cover rounded-t-[15px] "
               />
@@ -241,7 +242,7 @@ const Home = () => {
           <article onClick={() => window.location.href = "/informative_article_3"} className="card flex flex-col justify-center items-start bg-white rounded-2xl shadow-lg w-[234px] max-sm:w-[320px] transform transition-transform duration-300 hover:scale-105 cursor-pointer">
             <figure className="w-full h-36 rounded-3xl max-sm:h-60">
               <img
-                src={article_3}
+                src={ informative_article_3_img}
                 alt=""
                 className="w-full h-full object-cover rounded-t-[15px] "
               />
@@ -305,7 +306,7 @@ const Home = () => {
             <article onClick={() => window.location.href = "/workshop_article_1"} className="card flex flex-col justify-center items-start bg-white rounded-2xl shadow-lg w-[234px] max-sm:w-[320px]  transform transition-transform duration-300 hover:scale-105 cursor-pointer">
               <figure className="w-full h-36 rounded-3xl max-sm:h-60">
                 <img
-                  src={article_4}
+                  src={workshop_article_1_img}
                   alt=""
                   className="w-full h-full object-cover rounded-t-[15px] "
                 />
@@ -327,7 +328,7 @@ const Home = () => {
             <article onClick={() => window.location.href = "/workshop_article_2"} className=" card flex flex-col justify-center items-start bg-white rounded-2xl shadow-lg w-[234px] max-sm:w-[320px] transform transition-transform duration-300 hover:scale-105 cursor-pointer">
               <figure className="w-full h-36 rounded-3xl max-sm:h-60">
                 <img
-                  src={article_5}
+                  src={workshop_article_2_img}
                   alt=""
                   className="w-full h-full object-cover rounded-t-[15px] "
                 />

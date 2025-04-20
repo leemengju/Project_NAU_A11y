@@ -2,30 +2,62 @@ import React from "react";
 import { ChevronLeft } from "lucide-react";
 import { Ellipsis } from "lucide-react";
 import AveryLin from "../assets/avatar/Avery_lin.jpg"
+import Laurence from "../assets/avatar/Laurence.png"
 import p1 from "../assets/informative_article_1/p1.svg";
 import p2 from "../assets/informative_article_1/p2.svg";
 import p3 from "../assets/informative_article_1/p3.svg";
 import p4 from "../assets/informative_article_1/p4.svg";
 import p5 from "../assets/informative_article_1/p5.svg";
 import ArrowRight, { ArrowRightWithStroke } from '../components/icons';
-import article_1 from '../assets/home/article_1.svg';
-import article_2 from '../assets/home/article_2.svg';
-import article_3 from '../assets/home/article_3.svg';
+import informative_article_1_img from '../assets/home/informative_article_1.svg'
+import informative_article_2_img from '../assets/home/informative_article_2.svg'
+import informative_article_3_img from '../assets/home/informative_article_3.svg'
+import ShareButton from '../components/ShareButton';
+
+import { Helmet } from 'react-helmet';
 
 
 
 
 const informative_article_1 = () => {
+
+
+
+  const articles = [
+    {
+      id: 1,
+      title: "推開數位無障礙大門，輕鬆淺談數位無障礙規範",
+      author: "Avery Lin",
+      authorImg: AveryLin,
+      date: "2024-10-28",
+      image: informative_article_1_img,
+      link: "/informative_article_1"
+    },
+    
+  ];
   const articleContent = [
     {
       type: "header",
       content: (
-        <header className="mb-16">
-          <h4 onClick={() => window.location.href = '/collection_knowledge'} className=" flex flex-row items-center gap-1 mb-1.5 text-xl font-medium tracking-wide text-stone-700 max-sm:text-md max-sm:leading-9 underline">
 
-            <ChevronLeft />
-            回到文章彙總
-          </h4>
+
+        <header className="mb-16">
+          {/* title_row */}
+          <div className="flex flex-row justify-between items-center mb-1.5">
+            <h4 onClick={() => window.location.href = '/collection_knowledge'} className=" flex flex-row items-center gap-1  text-xl font-medium tracking-wide text-stone-700 max-sm:text-md max-sm:leading-9 underline">
+
+              <ChevronLeft />
+              回到文章彙總
+            </h4>
+            {/* 分享按鈕 */}
+            <ShareButton article={articles[0]} />
+     
+           
+          </div>
+
+
+
+
           <h1 className="mb-1.5 text-3xl font-bold tracking-wide leading-10 text-stone-700 max-sm:text-2xl max-sm:leading-9">
             推開數位無障礙大門，輕鬆淺談數位無障礙規範
           </h1>
@@ -199,6 +231,14 @@ const informative_article_1 = () => {
 
   return (
     <>
+      <Helmet>
+        <title>{articles[0].title}</title>
+        <meta property="og:title" content={articles[0].title} />
+        <meta property="og:description" content="數位無障礙是什麼？身為產品設計與開發者的我們，可以遵循哪些全球與在地規範呢？" />
+        <meta property="og:url" content={window.location.origin + articles[0].link} />
+        <meta property="og:type" content="article" />
+        <meta property="og:image" content={articles[0].image} />
+      </Helmet>
       <article className="mx-auto mt-30 mb-20 text-gray-700 max-w-[510px] max-md:px-5 max-md:py-0">
         {articleContent.map((section, index) => (
           <React.Fragment key={index}>
@@ -208,89 +248,89 @@ const informative_article_1 = () => {
       </article>
       {/* 推薦文章 */}
       <div className="bg-[#F4F4F4] w-full flex flex-col justify-center items-center py-8 px-4 max-sm:px-0 max-sm:gap-8">
-              {/* knowledge_titleRow */}
-              <section className="flex justify-between items-center  w-[732px]  max-sm:w-[390px] max-sm:px-[32px] ">
-                <h2 className="text-xl leading-8 font-[350] text-stone-700 tracking-[3px]">
-                  你可能會感興趣的文章
-                </h2>
-                <a href="/collection_knowledge" className="flex items-center cursor-pointer transform transition-transform duration-300 hover:scale-110" style={{display: "none"}}>
-                  <span className="pr-2.5 text-lg leading-7 text-stone-600 tracking-[2.4px]">
-                    more
-                  </span>
-                  <ArrowRightWithStroke />
-                </a>
-              </section>
+        {/* knowledge_titleRow */}
+        <section className="flex justify-between items-center  w-[732px]  max-sm:w-[390px] max-sm:px-[32px] ">
+          <h2 className="text-xl leading-8 font-[350] text-stone-700 tracking-[3px]">
+            你可能會感興趣的文章
+          </h2>
+          <a href="/collection_knowledge" className="flex items-center cursor-pointer transform transition-transform duration-300 hover:scale-110" style={{ display: "none" }}>
+            <span className="pr-2.5 text-lg leading-7 text-stone-600 tracking-[2.4px]">
+              more
+            </span>
+            <ArrowRightWithStroke />
+          </a>
+        </section>
 
-              {/* knowledge_cardsRow */}
-              <section className=" flex flex-row gap-4 py-4 w-[732px] max-sm:flex-col max-sm:px-9 max-sm:justify-center max-sm:w-[390px] ">
-                <article onClick={() => window.location.href = "/informative_article_1"} className="card flex flex-col justify-center items-start bg-white rounded-2xl shadow-lg w-[234px] max-sm:w-[320px] transform transition-transform duration-300 hover:scale-105 cursor-pointer">
-                  <figure className="w-full h-36 rounded-3xl max-sm:h-60">
-                    <img
-                      src={article_1}
-                      alt=""
-                      className="w-full h-full object-cover rounded-t-[15px] "
-                    />
-                  </figure>
-                  <div className="flex flex-col justify-between px-5 pt-2.5 pb-0 h-[124px]">
-                    <h3 className="pt-1 text-base font-bold tracking-wider leading-6 text-stone-700">
-                      推開數位無障礙大門，輕鬆淺談數位無障礙規範
-                    </h3>
-                    <div className="pt-5 pb-7">
-                      <a href="#" className="flex items-center justify-end">
-                        <span className="mr-1.5 text-base tracking-wider leading-5 font-[350] text-neutral-500">
-                          繼續閱讀
-                        </span>
-                        <ArrowRight />
-                      </a>
-                    </div>
-                  </div>
-                </article>
-                <article onClick={() => window.location.href = "/informative_article_2"} className="card flex flex-col justify-center items-start bg-white rounded-2xl shadow-lg w-[234px] max-sm:w-[320px] transform transition-transform duration-300 hover:scale-105 cursor-pointer">
-                  <figure className="w-full h-36 rounded-3xl max-sm:h-60">
-                    <img
-                      src={article_2}
-                      alt=""
-                      className="w-full h-full object-cover rounded-t-[15px] "
-                    />
-                  </figure>
-                  <div className="flex flex-col justify-between px-5 pt-2.5 pb-0 h-[124px]">
-                    <h3 className="pt-1 text-base font-bold tracking-wider leading-6 text-stone-700">
-                      如何建立數位無障礙的三大思維觀念?
-                    </h3>
-                    <div className="pt-5 pb-7">
-                      <a href="#" className="flex items-center justify-end">
-                        <span className="mr-1.5 text-base tracking-wider leading-5 font-[350] text-neutral-500">
-                          繼續閱讀
-                        </span>
-                        <ArrowRight />
-                      </a>
-                    </div>
-                  </div>
-                </article>
-                <article onClick={() => window.location.href = "/informative_article_3"} className="card flex flex-col justify-center items-start bg-white rounded-2xl shadow-lg w-[234px] max-sm:w-[320px] transform transition-transform duration-300 hover:scale-105 cursor-pointer">
-                  <figure className="w-full h-36 rounded-3xl max-sm:h-60">
-                    <img
-                      src={article_3}
-                      alt=""
-                      className="w-full h-full object-cover rounded-t-[15px] "
-                    />
-                  </figure>
-                  <div className="flex flex-col justify-between px-5 pt-2.5 pb-0 h-[124px]">
-                    <h3 className="pt-1 text-base font-bold tracking-wider leading-6 text-stone-700">
-                      無障礙案例分享：電動遊戲如何無障礙?
-                    </h3>
-                    <div className="pt-5 pb-7">
-                      <a href="#" className="flex items-center justify-end">
-                        <span className="mr-1.5 text-base tracking-wider leading-5 font-[350] text-neutral-500">
-                          繼續閱讀
-                        </span>
-                        <ArrowRight />
-                      </a>
-                    </div>
-                  </div>
-                </article>
-              </section>
+        {/* knowledge_cardsRow */}
+        <section className=" flex flex-row gap-4 py-4 w-[732px] max-sm:flex-col max-sm:px-9 max-sm:justify-center max-sm:w-[390px] ">
+          <article onClick={() => window.location.href = "/informative_article_1"} className="card flex flex-col justify-center items-start bg-white rounded-2xl shadow-lg w-[234px] max-sm:w-[320px] transform transition-transform duration-300 hover:scale-105 cursor-pointer">
+            <figure className="w-full h-36 rounded-3xl max-sm:h-60">
+              <img
+                src={informative_article_1_img}
+                alt=""
+                className="w-full h-full object-cover rounded-t-[15px] "
+              />
+            </figure>
+            <div className="flex flex-col justify-between px-5 pt-2.5 pb-0 h-[124px]">
+              <h3 className="pt-1 text-base font-bold tracking-wider leading-6 text-stone-700">
+                推開數位無障礙大門，輕鬆淺談數位無障礙規範
+              </h3>
+              <div className="pt-5 pb-7">
+                <a href="#" className="flex items-center justify-end">
+                  <span className="mr-1.5 text-base tracking-wider leading-5 font-[350] text-neutral-500">
+                    繼續閱讀
+                  </span>
+                  <ArrowRight />
+                </a>
+              </div>
             </div>
+          </article>
+          <article onClick={() => window.location.href = "/informative_article_2"} className="card flex flex-col justify-center items-start bg-white rounded-2xl shadow-lg w-[234px] max-sm:w-[320px] transform transition-transform duration-300 hover:scale-105 cursor-pointer">
+            <figure className="w-full h-36 rounded-3xl max-sm:h-60">
+              <img
+                src={informative_article_2_img}
+                alt=""
+                className="w-full h-full object-cover rounded-t-[15px] "
+              />
+            </figure>
+            <div className="flex flex-col justify-between px-5 pt-2.5 pb-0 h-[124px]">
+              <h3 className="pt-1 text-base font-bold tracking-wider leading-6 text-stone-700">
+                如何建立數位無障礙的三大思維觀念?
+              </h3>
+              <div className="pt-5 pb-7">
+                <a href="#" className="flex items-center justify-end">
+                  <span className="mr-1.5 text-base tracking-wider leading-5 font-[350] text-neutral-500">
+                    繼續閱讀
+                  </span>
+                  <ArrowRight />
+                </a>
+              </div>
+            </div>
+          </article>
+          <article onClick={() => window.location.href = "/informative_article_3"} className="card flex flex-col justify-center items-start bg-white rounded-2xl shadow-lg w-[234px] max-sm:w-[320px] transform transition-transform duration-300 hover:scale-105 cursor-pointer">
+            <figure className="w-full h-36 rounded-3xl max-sm:h-60">
+              <img
+                src={informative_article_3_img}
+                alt=""
+                className="w-full h-full object-cover rounded-t-[15px] "
+              />
+            </figure>
+            <div className="flex flex-col justify-between px-5 pt-2.5 pb-0 h-[124px]">
+              <h3 className="pt-1 text-base font-bold tracking-wider leading-6 text-stone-700">
+                無障礙案例分享：電動遊戲如何無障礙?
+              </h3>
+              <div className="pt-5 pb-7">
+                <a href="#" className="flex items-center justify-end">
+                  <span className="mr-1.5 text-base tracking-wider leading-5 font-[350] text-neutral-500">
+                    繼續閱讀
+                  </span>
+                  <ArrowRight />
+                </a>
+              </div>
+            </div>
+          </article>
+        </section>
+      </div>
     </>
   );
 };

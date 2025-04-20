@@ -1,7 +1,8 @@
 import ArrowRight from '../components/icons'
-import article_1 from '../assets/home/article_1.svg'
-import article_2 from '../assets/home/article_2.svg'
-import article_3 from '../assets/home/article_3.svg'
+import informative_article_1_img from '../assets/home/informative_article_1.svg'
+import informative_article_2_img from '../assets/home/informative_article_2.svg'
+import informative_article_3_img from '../assets/home/informative_article_3.svg'
+import informative_article_4_img from '../assets/home/informative_article_4.svg'
 import AveryLin from "../assets/avatar/Avery_lin.jpg"
 import Laurence from "../assets/avatar/Laurence.png"
 import { useNavigate } from 'react-router-dom';
@@ -21,7 +22,7 @@ const Collection_knowledge = () => {
       author: "Avery Lin",
       authorImg: AveryLin,
       date: "2024-10-28",
-      image: article_1,
+      image: informative_article_1_img,
       link: "/informative_article_1"
     },
     {
@@ -30,7 +31,7 @@ const Collection_knowledge = () => {
       author: "Avery Lin",
       authorImg: AveryLin,
       date: "2024-10-28",
-      image: article_2,
+      image: informative_article_2_img,
       link: "/informative_article_2"
     },
     {
@@ -39,8 +40,17 @@ const Collection_knowledge = () => {
       author: "Laurence",
       authorImg: Laurence,
       date: "2024-10-28",
-      image: article_3,
+      image: informative_article_3_img,
       link: "/informative_article_3"
+    },
+    {
+      id: 4,
+      title: "包容性設計工具箱：助你一臂之力！",
+      author: "Avery Lin",
+      authorImg: AveryLin,
+      date: "2025-02-21",
+      image: informative_article_4_img,
+      link: "/informative_article_4"
     }
   ];
 
@@ -90,8 +100,8 @@ const Collection_knowledge = () => {
         <section className="flex flex-row flex-wrap justify-between gap-6 w-[1240px] max-lg:flex-col max-lg:items-center max-lg:w-full">
           {filteredArticles.map(article => (
             <article 
-              key={article.id}
-              onClick={() => window.location.href = article.link} 
+            onClick={() => window.location.href = article.link} 
+            key={article.id}
               className="card flex flex-col rounded-2xl w-[600px] max-sm:w-[320px] max-sm:shadow-lg transform transition-transform duration-300 hover:scale-105 cursor-pointer"
             >
               {/* 卡片圖片 */}
@@ -104,9 +114,12 @@ const Collection_knowledge = () => {
               </figure>
               {/* 卡片文字內容 */}
               <div className="flex flex-col gap-3 px-5 pt-2.5 pb-1 h-fill max-sm:gap-1">
-                <h3 className="pt-1 text-[20px] font-bold tracking-wider leading-6 text-stone-700 max-sm:text-[16px]">
-                  <HighlightText text={article.title} highlight={searchKeywords} />
-                </h3>
+                <div className="flex justify-between items-start">
+                  <h3 className="pt-1 text-[20px] font-bold tracking-wider leading-6 text-stone-700 max-sm:text-[16px]">
+                    <HighlightText text={article.title} highlight={searchKeywords} />
+                  </h3>
+                
+                </div>
                 {/* 作者與日期*/}
                 <div className="flex flex-row items-center gap-2 max-sm:mt-2">
                   <img src={article.authorImg} alt={article.author} className="w-10 h-10 border-2 border-red-700 rounded-full" />
@@ -124,7 +137,7 @@ const Collection_knowledge = () => {
                 </div>
                 {/* 卡片文字_bottom */}
                 <div className="pb-3">
-                  <a href="#" className="flex items-center justify-end">
+                  <a href={article.link} className="flex items-center justify-end">
                     <span className="mr-1.5 text-base tracking-wider leading-5 font-[350] text-neutral-500">
                       繼續閱讀
                     </span>

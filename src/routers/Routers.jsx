@@ -8,6 +8,7 @@ import Home from "../views/Home";
 import Informative_article_1 from "../views/Informative_article_1";
 import Informative_article_2 from "../views/Informative_article_2";
 import Informative_article_3 from "../views/Informative_article_3";
+import Informative_article_4 from "../views/Informative_article_4";
 import Workshop_article_1 from "../views/Workshop_article_1";
 import Workshop_article_2 from "../views/Workshop_article_2";
 
@@ -27,6 +28,7 @@ function AppRouter() {
           <Route path="informative_article_1" element={<Informative_article_1 />} />
           <Route path="informative_article_2" element={<Informative_article_2 />} />
           <Route path="informative_article_3" element={<Informative_article_3 />} />
+          <Route path="informative_article_4" element={<Informative_article_4 />} />
           <Route path="workshop_article_1" element={<Workshop_article_1 />} />
           <Route path="workshop_article_2" element={<Workshop_article_2 />} /> 
       

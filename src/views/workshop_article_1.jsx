@@ -2,9 +2,30 @@ import React from "react";
 import { ChevronLeft } from "lucide-react";
 import AveryLin from "../assets/avatar/Avery_lin.jpg"
 import ArrowRight, { ArrowRightWithStroke } from '../components/icons';
-import article_4 from '../assets/home/article_4.svg';
-import article_5 from '../assets/home/article_5.svg';
+import ShareButton from '../components/ShareButton';
+import workshop_article_1_img from '../assets/home/workshop_article_1.svg';
+import workshop_article_2_img from '../assets/home/workshop_article_2.svg';
 
+const articles = [
+  {
+    id: 1,
+    title: "數位無障礙設計：遊石設計企業內訓",
+    author: "Avery Lin",
+    authorImg: AveryLin,
+    date: "2024-11-20",
+    image: workshop_article_1_img,
+    link: "/workshop_article_1"
+  },
+  {
+    id: 2,
+    title: "無障礙設計工作坊：台灣設計研究院",
+    author: "Avery Lin",
+    authorImg: AveryLin,
+    date: "2024-11-15",
+    image: workshop_article_2_img,
+    link: "/workshop_article_2"
+  },
+]
 
 
 const Workshop_article_1 = () => {
@@ -13,11 +34,17 @@ const Workshop_article_1 = () => {
       type: "header",
       content: (
         <header className="mb-16">
-          <h4 onClick={() => window.location.href = '/collection_workshop'} className=" flex flex-row items-center gap-1 mb-1.5 text-xl font-medium tracking-wide text-stone-700 max-sm:text-md max-sm:leading-9 underline">
+          {/* title_row */}
+          <div className="flex flex-row justify-between items-center mb-1.5">
+            <h4 onClick={() => window.location.href = '/collection_workshop'} className=" flex flex-row items-center gap-1  text-xl font-medium tracking-wide text-stone-700 max-sm:text-md max-sm:leading-9 underline">
 
-            <ChevronLeft />
-            回到文章彙總
-          </h4>
+              <ChevronLeft />
+              回到文章彙總
+            </h4>
+            {/* 分享按鈕 */}
+            <ShareButton article={articles[0]} />
+
+          </div>
           <h1 className="mb-1.5 text-3xl font-bold tracking-wide leading-10 text-stone-700 max-sm:text-2xl max-sm:leading-9">
             數位無障礙設計：遊石設計企業內訓
           </h1>
@@ -187,73 +214,72 @@ const Workshop_article_1 = () => {
         {articleContent.map((section, index) => (
           <React.Fragment key={index}>
             {section.content}
-      
           </React.Fragment>
         ))}
       </article>
       {/* 推薦文章 */}
       <div className="bg-[#F4F4F4] w-full py-4 flex flex-col justify-center items-center py-8 px-4 max-sm:px-0 max-sm:gap-8">
-          {/* workshop_titleRow */}
-          <section className="flex justify-between items-center  w-[732px]  max-sm:w-[390px] max-sm:px-[32px] ">
-            <h2 className="text-xl leading-8 font-[350] text-stone-700 tracking-[3px]">
-              你可能會感興趣的文章
-            </h2>
-            <a href="/collection_workshop" style={{display: "none"}} className="flex items-center cursor-pointer transform transition-transform duration-300 hover:scale-110">
-              <span className="pr-2.5 text-lg leading-7 text-stone-600 tracking-[2.4px]">
-                more
-              </span>
-              <ArrowRightWithStroke />
-            </a>
-          </section>
+        {/* workshop_titleRow */}
+        <section className="flex justify-between items-center  w-[732px]  max-sm:w-[390px] max-sm:px-[32px] ">
+          <h2 className="text-xl leading-8 font-[350] text-stone-700 tracking-[3px]">
+            你可能會感興趣的文章
+          </h2>
+          <a href="/collection_workshop" style={{ display: "none" }} className="flex items-center cursor-pointer transform transition-transform duration-300 hover:scale-110">
+            <span className="pr-2.5 text-lg leading-7 text-stone-600 tracking-[2.4px]">
+              more
+            </span>
+            <ArrowRightWithStroke />
+          </a>
+        </section>
 
-          {/* workshop_cardsRow */}
-          <section className=" flex flex-row gap-4 py-4 w-[732px] max-sm:flex-col max-sm:px-9 max-sm:justify-center max-sm:w-[390px] ">
-            <article onClick={() => window.location.href = "/workshop_article_1"} className="card flex flex-col justify-center items-start bg-white rounded-2xl shadow-lg w-[234px] max-sm:w-[320px]  transform transition-transform duration-300 hover:scale-105 cursor-pointer">
-              <figure className="w-full h-36 rounded-3xl max-sm:h-60">
-                <img
-                  src={article_4}
-                  alt=""
-                  className="w-full h-full object-cover rounded-t-[15px] "
-                />
-              </figure>
-              <div className="flex flex-col justify-between px-5 pt-2.5 pb-0 h-[124px]">
-                <h3 className="pt-1 text-base font-bold tracking-wider leading-6 text-stone-700">
-                  數位無障礙設計：遊石設計企業內訓
-                </h3>
-                <div className="pt-5 pb-7">
-                  <a href="#" className="flex items-center justify-end">
-                    <span className="mr-1.5 text-base tracking-wider leading-5 font-[350] text-neutral-500">
-                      繼續閱讀
-                    </span>
-                    <ArrowRight />
-                  </a>
-                </div>
+        {/* workshop_cardsRow */}
+        <section className=" flex flex-row gap-4 py-4 w-[732px] max-sm:flex-col max-sm:px-9 max-sm:justify-center max-sm:w-[390px] ">
+          <article onClick={() => window.location.href = "/workshop_article_1"} className="card flex flex-col justify-center items-start bg-white rounded-2xl shadow-lg w-[234px] max-sm:w-[320px]  transform transition-transform duration-300 hover:scale-105 cursor-pointer">
+            <figure className="w-full h-36 rounded-3xl max-sm:h-60">
+              <img
+                src={workshop_article_1_img}
+                alt=""
+                className="w-full h-full object-cover rounded-t-[15px] "
+              />
+            </figure>
+            <div className="flex flex-col justify-between px-5 pt-2.5 pb-0 h-[124px]">
+              <h3 className="pt-1 text-base font-bold tracking-wider leading-6 text-stone-700">
+                數位無障礙設計：遊石設計企業內訓
+              </h3>
+              <div className="pt-5 pb-7">
+                <a href="#" className="flex items-center justify-end">
+                  <span className="mr-1.5 text-base tracking-wider leading-5 font-[350] text-neutral-500">
+                    繼續閱讀
+                  </span>
+                  <ArrowRight />
+                </a>
               </div>
-            </article>
-            <article onClick={() => window.location.href = "/workshop_article_2"} className=" card flex flex-col justify-center items-start bg-white rounded-2xl shadow-lg w-[234px] max-sm:w-[320px] transform transition-transform duration-300 hover:scale-105 cursor-pointer">
-              <figure className="w-full h-36 rounded-3xl max-sm:h-60">
-                <img
-                  src={article_5}
-                  alt=""
-                  className="w-full h-full object-cover rounded-t-[15px] "
-                />
-              </figure>
-              <div className="flex flex-col justify-between px-5 pt-2.5 pb-0 h-[124px]">
-                <h3 className="pt-1 text-base font-bold tracking-wider leading-6 text-stone-700">
-                  體驗工作坊分享文：包容不卡卡桌遊
-                </h3>
-                <div className="pt-5 pb-7">
-                  <a href="#" className="flex items-center justify-end">
-                    <span className="mr-1.5 text-base tracking-wider leading-5 font-[350] text-neutral-500">
-                      繼續閱讀
-                    </span>
-                    <ArrowRight />
-                  </a>
-                </div>
+            </div>
+          </article>
+          <article onClick={() => window.location.href = "/workshop_article_2"} className=" card flex flex-col justify-center items-start bg-white rounded-2xl shadow-lg w-[234px] max-sm:w-[320px] transform transition-transform duration-300 hover:scale-105 cursor-pointer">
+            <figure className="w-full h-36 rounded-3xl max-sm:h-60">
+              <img
+                src={workshop_article_2_img}
+                alt=""
+                className="w-full h-full object-cover rounded-t-[15px] "
+              />
+            </figure>
+            <div className="flex flex-col justify-between px-5 pt-2.5 pb-0 h-[124px]">
+              <h3 className="pt-1 text-base font-bold tracking-wider leading-6 text-stone-700">
+                體驗工作坊分享文：包容不卡卡桌遊
+              </h3>
+              <div className="pt-5 pb-7">
+                <a href="#" className="flex items-center justify-end">
+                  <span className="mr-1.5 text-base tracking-wider leading-5 font-[350] text-neutral-500">
+                    繼續閱讀
+                  </span>
+                  <ArrowRight />
+                </a>
               </div>
-            </article>
-          </section>
-          </div >
+            </div>
+          </article>
+        </section>
+      </div >
     </>
   );
 };
